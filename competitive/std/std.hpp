@@ -44,3 +44,7 @@ constexpr lint LINF = 1e18;
 #define rrepi(i, a, b) for (int i = int(a - 1); i >= int(b); --i)
 #define rrep(...) _overload3(__VA_ARGS__, rrepi, _rrep)(__VA_ARGS__)
 #define all(x) (x).begin(), (x).end()
+
+// 関数
+template<class T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return 1; } return 0; }
+template<class T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } return 0; }
