@@ -2,7 +2,7 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-// 型名短縮
+// type name
 using lint = long long;
 using ld = long double;
 using P = pair<lint, lint>;
@@ -28,13 +28,13 @@ using PQ_max = priority_queue<T>;
 template <class T>
 using PQ_min = priority_queue<T, vector<T>, greater<T>>;
 
-// 定数
+// constant
 constexpr ld EPS = 1e-10;
 const ld PI = acosl(-1.0);
 constexpr int INF = 1e9;
 constexpr lint LINF = 1e18;
 
-// マクロ
+// macro
 #define _overload3(_1, _2, _3, name, ...) name
 #define _rep(i, n) repi(i, 0, n)
 #define repi(i, a, b) for (int i = int(a); i < int(b); ++i)
@@ -45,6 +45,6 @@ constexpr lint LINF = 1e18;
 #define rrep(...) _overload3(__VA_ARGS__, rrepi, _rrep)(__VA_ARGS__)
 #define all(x) (x).begin(), (x).end()
 
-// 関数
+// function
 template<class T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return 1; } return 0; }
 template<class T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } return 0; }
