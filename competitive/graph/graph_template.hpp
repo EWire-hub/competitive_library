@@ -1,5 +1,9 @@
 #pragma once
 
+/**
+ * @brief Graph Template(グラフテンプレート)
+ */
+
 template <class T = long long>
 struct Edge
 {
