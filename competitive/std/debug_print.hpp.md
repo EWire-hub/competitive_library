@@ -8,12 +8,12 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: "#line 1 \"codes/std/debug_print.hpp\"\n\n\n\n#define INCLUDED(n) ((defined\
-    \ _GLIBCXX_##n) || (defined _LIBCPP_##n))\n\n#if __cplusplus < 201703L\n#  warning\
-    \ Please use C++17 (or later version).\n#endif\n#if !INCLUDED(ALGORITHM)\n#  warning\
-    \ Please include <algorithm> before including debug_print.hpp.\n#endif\n#if !INCLUDED(CCTYPE)\n\
-    #  warning Please include <cctype> before including debug_print.hpp.\n#endif\n\
-    #if !INCLUDED(IOSTREAM)\n#  warning Please include <iostream> before including\
+  bundledCode: "#line 1 \"competitive/std/debug_print.hpp\"\n\n\n\n#define INCLUDED(n)\
+    \ ((defined _GLIBCXX_##n) || (defined _LIBCPP_##n))\n\n#if __cplusplus < 201703L\n\
+    #  warning Please use C++17 (or later version).\n#endif\n#if !INCLUDED(ALGORITHM)\n\
+    #  warning Please include <algorithm> before including debug_print.hpp.\n#endif\n\
+    #if !INCLUDED(CCTYPE)\n#  warning Please include <cctype> before including debug_print.hpp.\n\
+    #endif\n#if !INCLUDED(IOSTREAM)\n#  warning Please include <iostream> before including\
     \ debug_print.hpp.\n#endif\n#if !INCLUDED(ITERATOR)\n#  warning Please include\
     \ <iterator> before including debug_print.hpp.\n#endif\n#if !INCLUDED(STRING_VIEW)\n\
     #  warning Please include <string_view> before including debug_print.hpp.\n#endif\n\
@@ -245,15 +245,15 @@ data:
     \  // DEBUG_PRINT_HPP"
   dependsOn: []
   isVerificationFile: false
-  path: codes/std/debug_print.hpp
+  path: competitive/std/debug_print.hpp
   requiredBy: []
-  timestamp: '2023-08-20 14:49:32+09:00'
+  timestamp: '2023-08-20 21:04:01+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: codes/std/debug_print.hpp
+documentation_of: competitive/std/debug_print.hpp
 layout: document
 redirect_from:
-- /library/codes/std/debug_print.hpp
-- /library/codes/std/debug_print.hpp.html
-title: codes/std/debug_print.hpp
+- /library/competitive/std/debug_print.hpp
+- /library/competitive/std/debug_print.hpp.html
+title: competitive/std/debug_print.hpp
 ---

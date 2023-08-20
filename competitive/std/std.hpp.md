@@ -1,14 +1,17 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: competitive/std/io.hpp
+    title: competitive/std/io.hpp
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: '#line 2 "codes/std/std.hpp"
+  bundledCode: '#line 2 "competitive/std/std.hpp"
 
     #include <bits/stdc++.h>
 
@@ -208,15 +211,16 @@ data:
     '
   dependsOn: []
   isVerificationFile: false
-  path: codes/std/std.hpp
-  requiredBy: []
-  timestamp: '2023-08-20 14:49:32+09:00'
+  path: competitive/std/std.hpp
+  requiredBy:
+  - competitive/std/io.hpp
+  timestamp: '2023-08-20 21:04:01+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
-documentation_of: codes/std/std.hpp
+documentation_of: competitive/std/std.hpp
 layout: document
 redirect_from:
-- /library/codes/std/std.hpp
-- /library/codes/std/std.hpp.html
-title: codes/std/std.hpp
+- /library/competitive/std/std.hpp
+- /library/competitive/std/std.hpp.html
+title: competitive/std/std.hpp
 ---

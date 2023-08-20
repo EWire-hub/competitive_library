@@ -54,25 +54,25 @@ data:
     - icon: ':warning:'
       path: atcoder/twosat.hpp
       title: atcoder/twosat.hpp
-  - name: codes/graph
+  - name: competitive/graph
     pages:
     - icon: ':warning:'
-      path: codes/graph/graph_template.hpp
-      title: codes/graph/graph_template.hpp
+      path: competitive/graph/graph_template.hpp
+      title: competitive/graph/graph_template.hpp
     - icon: ':warning:'
-      path: codes/graph/topological_sort.hpp
-      title: codes/graph/topological_sort.hpp
-  - name: codes/std
+      path: competitive/graph/topological_sort.hpp
+      title: competitive/graph/topological_sort.hpp
+  - name: competitive/std
     pages:
     - icon: ':warning:'
-      path: codes/std/debug_print.hpp
-      title: codes/std/debug_print.hpp
+      path: competitive/std/debug_print.hpp
+      title: competitive/std/debug_print.hpp
     - icon: ':warning:'
-      path: codes/std/io.hpp
-      title: codes/std/io.hpp
+      path: competitive/std/io.hpp
+      title: competitive/std/io.hpp
     - icon: ':warning:'
-      path: codes/std/std.hpp
-      title: codes/std/std.hpp
+      path: competitive/std/std.hpp
+      title: competitive/std/std.hpp
   verificationCategories:
   - name: .
     pages:
