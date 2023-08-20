@@ -19,6 +19,6 @@ int main() {
         int t_i; cin >> t_i;
         cnt += s.count(t_i);
     }
-    cout << cnt << endl;
+    cout << cnt << "\n";
     return 0;
 }
