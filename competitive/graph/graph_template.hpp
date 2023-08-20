@@ -14,7 +14,7 @@ struct Edge
 template <class T = long long>
 struct Graph
 {
-    vector<vector<Edge>> g;
+    vector<vector<Edge<T>>> g;
     int es;
 
     Graph() = default;
@@ -23,8 +23,18 @@ struct Graph
     size_t size() const { return g.size(); }
     void add_edge(int from, int to, T cost = 1, bool direction = false)
     {
-        if (direction)
+        if (!direction)
             g[to].emplace_back(from, cost, es);
         g[from].emplace_back(to, cost, es++);
+    }
+
+    inline vector<Edge<T>> &operator[](const int &k)
+    {
+        return g[k];
+    }
+
+    inline const vector<Edge<T>> &operator[](const int &k) const
+    {
+        return g[k];
     }
 };
