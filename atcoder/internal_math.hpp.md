@@ -149,8 +149,8 @@ data:
   path: atcoder/internal_math.hpp
   requiredBy:
   - atcoder/modint.hpp
-  - atcoder/math.hpp
   - atcoder/convolution.hpp
+  - atcoder/math.hpp
   timestamp: '2023-08-20 15:53:42+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
