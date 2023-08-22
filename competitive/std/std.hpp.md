@@ -24,7 +24,9 @@ data:
 
     using ld = long double;
 
-    using P = pair<lint, lint>;
+    using PII = pair<int, int>;
+
+    using PLL = pair<lint, lint>;
 
     using VI = vector<int>;
 
@@ -50,9 +52,13 @@ data:
 
     using VVVLD = vector<VVLD>;
 
-    using VP = vector<P>;
+    using VPII = vector<PII>;
 
-    using VVP = vector<VP>;
+    using VVPII = vector<VPII>;
+
+    using VPLL = vector<PLL>;
+
+    using VVPLL = vector<VPLL>;
 
     using VS = vector<string>;
 
@@ -123,7 +129,9 @@ data:
 
     using ld = long double;
 
-    using P = pair<lint, lint>;
+    using PII = pair<int, int>;
+
+    using PLL = pair<lint, lint>;
 
     using VI = vector<int>;
 
@@ -149,9 +157,13 @@ data:
 
     using VVVLD = vector<VVLD>;
 
-    using VP = vector<P>;
+    using VPII = vector<PII>;
 
-    using VVP = vector<VP>;
+    using VVPII = vector<VPII>;
+
+    using VPLL = vector<PLL>;
+
+    using VVPLL = vector<VPLL>;
 
     using VS = vector<string>;
 
@@ -214,7 +226,7 @@ data:
   path: competitive/std/std.hpp
   requiredBy:
   - competitive/std/io.hpp
-  timestamp: '2023-08-20 21:04:01+09:00'
+  timestamp: '2023-08-23 06:36:28+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: competitive/std/std.hpp
