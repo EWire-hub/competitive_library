@@ -5,8 +5,7 @@
  */
 
 template <class T = long long>
-struct Edge
-{
+struct Edge {
     int to;
     T cost;
     int idx;
@@ -16,8 +15,7 @@ struct Edge
 };
 
 template <class T = long long>
-struct Graph
-{
+struct Graph {
     vector<vector<Edge<T>>> g;
     int es;
 
@@ -25,20 +23,14 @@ struct Graph
     explicit Graph(int n) : g(n), es(0) {}
 
     size_t size() const { return g.size(); }
-    void add_edge(int from, int to, T cost = 1, bool direction = false)
-    {
-        if (!direction)
-            g[to].emplace_back(from, cost, es);
+    void add_edge(int from, int to, T cost = 1, bool direction = false) {
+        if (!direction) g[to].emplace_back(from, cost, es);
         g[from].emplace_back(to, cost, es++);
     }
 
-    inline vector<Edge<T>> &operator[](const int &k)
-    {
-        return g[k];
-    }
+    inline vector<Edge<T>> &operator[](const int &k) { return g[k]; }
 
-    inline const vector<Edge<T>> &operator[](const int &k) const
-    {
+    inline const vector<Edge<T>> &operator[](const int &k) const {
         return g[k];
     }
 };
