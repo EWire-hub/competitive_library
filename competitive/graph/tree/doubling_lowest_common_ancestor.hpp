@@ -13,9 +13,9 @@ struct DoublingLowestCommonAncestor : Graph<T> {
     vector<int> depth;
 
     DoublingLowestCommonAncestor() {}
-    DoublingLowestCommonAncestor(const Graph<> &G, int r = 0) { init(G, r); }
+    DoublingLowestCommonAncestor(const Graph<T> &G, int r = 0) { init(G, r); }
 
-    void init(const Graph<> &G, int r = 0) {
+    void init(const Graph<T> &G, int r = 0) {
         int V = (int)G.size();
         int h = 1;
         while ((1 << h) < V) h++;
@@ -28,7 +28,7 @@ struct DoublingLowestCommonAncestor : Graph<T> {
                     parent[i + 1][v] = parent[i][parent[i][v]];
     }
 
-    void dfs(const Graph<> &G, int v, int p, int d) {
+    void dfs(const Graph<T> &G, int v, int p, int d) {
         parent[0][v] = p;
         depth[v] = d;
         for (auto nv : G[v])
