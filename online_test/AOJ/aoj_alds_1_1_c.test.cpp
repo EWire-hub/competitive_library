@@ -1,8 +1,8 @@
 #define PROBLEM "http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C"
 
-#include "../std/io.hpp"
-#include "../std/std.hpp"
-#include "../math/number_theory/is_prime.hpp"
+#include "competitive/std/io.hpp"
+#include "competitive/std/std.hpp"
+#include "competitive/math/number_theory/is_prime.hpp"
 
 int main() {
     int N; input(N);
