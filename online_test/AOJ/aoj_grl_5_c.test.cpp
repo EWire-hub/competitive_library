@@ -2,9 +2,9 @@
     "https://judge.u-aizu.ac.jp/onlinejudge/" \
     "description.jsp?id=GRL_5_C&lang=ja"
 
-#include "../graph/tree/doubling_lowest_common_ancestor.hpp"
 #include "../std/io.hpp"
 #include "../std/std.hpp"
+#include "../graph/tree/doubling_lowest_common_ancestor.hpp"
 
 int main() {
     int n;
