@@ -5,7 +5,7 @@ documentation_of: //competitive/math/number_theory/is_prime.hpp
 
 # is_prime
 
-```
+```c++
 bool is_prime(long long x)
 ```
 
