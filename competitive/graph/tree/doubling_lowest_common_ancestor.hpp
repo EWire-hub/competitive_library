@@ -50,7 +50,7 @@ struct DoublingLowestCommonAncestor : Graph<T> {
     }
 
     int get_dist(int u, int v) {
-        return dist[u] + dist[v] - 2 * dist[get_lca(u, v)];
+        return depth[u] + depth[v] - 2 * depth[get_lca(u, v)];
     }
 
     bool is_on_path(int u, int v, int x) {
