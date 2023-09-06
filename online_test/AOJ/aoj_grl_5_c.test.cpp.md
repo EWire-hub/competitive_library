@@ -7,21 +7,20 @@ data:
   _pathExtension: cpp
   _verificationStatusIcon: ':x:'
   attributes: {}
-  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.5/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
     , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
     \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
     \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
-    \  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
-    , line 187, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
+    \  File \"/opt/hostedtoolcache/Python/3.11.5/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
+    , line 187, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.11.5/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
     \                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n \
-    \ File \"/opt/hostedtoolcache/Python/3.11.4/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
+    \ File \"/opt/hostedtoolcache/Python/3.11.5/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
     , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
     )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: ../std/io.hpp:\
     \ line -1: no such header\n"
-  code: "#define PROBLEM                               \\\n    \"https://judge.u-aizu.ac.jp/onlinejudge/\"\
-    \ \\\n    \"description.jsp?id=GRL_5_C&lang=ja\"\n\n#include \"../std/io.hpp\"\
-    \n#include \"../std/std.hpp\"\n#include \"../graph/tree/doubling_lowest_common_ancestor.hpp\"\
+  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/\" \"description.jsp?id=GRL_5_C&lang=ja\"\
+    \n\n#include \"../std/io.hpp\"\n#include \"../std/std.hpp\"\n#include \"../graph/tree/doubling_lowest_common_ancestor.hpp\"\
     \n\nint main() {\n    int n;\n    input(n);\n\n    Graph<int> G(n);\n    rep(i,\
     \ n) {\n        int k;\n        input(k);\n        rep(j, k) {\n            int\
     \ c;\n            input(c);\n            G.add_edge(i, c);\n        }\n    }\n\
