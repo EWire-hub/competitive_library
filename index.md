@@ -7,14 +7,22 @@ data:
       path: competitive/graph/graph_template.hpp
       title: "Graph Template(\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\
         )"
+  - name: competitive/graph/other
+    pages:
     - icon: ':warning:'
-      path: competitive/graph/topological_sort.hpp
-      title: competitive/graph/topological_sort.hpp
+      path: competitive/graph/other/topological_sort.hpp
+      title: competitive/graph/other/topological_sort.hpp
+  - name: competitive/graph/tree
+    pages:
+    - icon: ':warning:'
+      path: competitive/graph/tree/doubling_lowest_common_ancestor.hpp
+      title: "Doubling Lowest Common Ancestor (\u6700\u5C0F\u5171\u901A\u7956\u5148\
+        )"
   - name: competitive/math/number_theory
     pages:
     - icon: ':heavy_check_mark:'
       path: competitive/math/number_theory/is_prime.hpp
-      title: Is Prime
+      title: "Is Prime (\u7D20\u6570\u5224\u5B9A)"
   - name: competitive/std
     pages:
     - icon: ':warning:'
@@ -37,5 +45,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: online_test/AOJ/aoj_alds_1_1_c.test.cpp
       title: online_test/AOJ/aoj_alds_1_1_c.test.cpp
+    - icon: ':x:'
+      path: online_test/AOJ/aoj_grl_5_c.test.cpp
+      title: online_test/AOJ/aoj_grl_5_c.test.cpp
 layout: toppage
 ---

@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: competitive/math/number_theory/is_prime.hpp
-    title: Is Prime
+    title: "Is Prime (\u7D20\u6570\u5224\u5B9A)"
   - icon: ':heavy_check_mark:'
     path: competitive/std/io.hpp
     title: competitive/std/io.hpp
@@ -71,7 +71,7 @@ data:
     \ { cout << \"\\n\"; }\ntemplate <class T>\nvoid print(const T &a) {\n    cout\
     \ << a << '\\n';\n}\ntemplate <class T, class... Ts>\nvoid print(const T &a, const\
     \ Ts &...b) {\n    cout << a;\n    (..., (cout << ' ' << b));\n    cout << '\\\
-    n';\n}\n#line 1 \"competitive/math/number_theory/is_prime.hpp\"\nbool is_prime(long\
+    n';\n}\n#line 2 \"competitive/math/number_theory/is_prime.hpp\"\n\nbool is_prime(long\
     \ long x) {\n    if (x <= 1) return false;\n    for (long long i = 2; i * i <=\
     \ x; i++) {\n        if (x % i == 0) return false;\n    }\n    return true;\n\
     }\n#line 6 \"online_test/AOJ/aoj_alds_1_1_c.test.cpp\"\n\nint main() {\n    int\
@@ -89,7 +89,7 @@ data:
   isVerificationFile: true
   path: online_test/AOJ/aoj_alds_1_1_c.test.cpp
   requiredBy: []
-  timestamp: '2023-09-06 17:09:18+09:00'
+  timestamp: '2023-09-06 17:22:59+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: online_test/AOJ/aoj_alds_1_1_c.test.cpp

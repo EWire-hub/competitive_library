@@ -1,7 +1,10 @@
 ---
 data:
   _extendedDependsOn: []
-  _extendedRequiredBy: []
+  _extendedRequiredBy:
+  - icon: ':warning:'
+    path: competitive/graph/tree/doubling_lowest_common_ancestor.hpp
+    title: "Doubling Lowest Common Ancestor (\u6700\u5C0F\u5171\u901A\u7956\u5148)"
   _extendedVerifiedWith: []
   _isVerificationFailed: false
   _pathExtension: hpp
@@ -37,7 +40,8 @@ data:
   dependsOn: []
   isVerificationFile: false
   path: competitive/graph/graph_template.hpp
-  requiredBy: []
+  requiredBy:
+  - competitive/graph/tree/doubling_lowest_common_ancestor.hpp
   timestamp: '2023-08-23 06:36:28+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
