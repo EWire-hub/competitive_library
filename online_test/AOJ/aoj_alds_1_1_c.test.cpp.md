@@ -72,11 +72,11 @@ data:
     \ << a << '\\n';\n}\ntemplate <class T, class... Ts>\nvoid print(const T &a, const\
     \ Ts &...b) {\n    cout << a;\n    (..., (cout << ' ' << b));\n    cout << '\\\
     n';\n}\n#line 1 \"competitive/math/number_theory/is_prime.hpp\"\nbool is_prime(long\
-    \ long x){\n    if(x <= 1) return false;\n    for(long long i = 2; i * i <= x;\
-    \ i++){\n        if(x % i == 0) return false;\n    }\n    return true;\n}\n#line\
-    \ 6 \"online_test/AOJ/aoj_alds_1_1_c.test.cpp\"\n\nint main() {\n    int N; input(N);\n\
-    \n    int ans = 0;\n    rep(i, N){\n        int x; input(x);\n        if(is_prime(x))\
-    \ ans++;\n    }\n    print(ans);\n}\n"
+    \ long x) {\n    if (x <= 1) return false;\n    for (long long i = 2; i * i <=\
+    \ x; i++) {\n        if (x % i == 0) return false;\n    }\n    return true;\n\
+    }\n#line 6 \"online_test/AOJ/aoj_alds_1_1_c.test.cpp\"\n\nint main() {\n    int\
+    \ N; input(N);\n\n    int ans = 0;\n    rep(i, N){\n        int x; input(x);\n\
+    \        if(is_prime(x)) ans++;\n    }\n    print(ans);\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C\"\
     \n\n#include \"competitive/std/io.hpp\"\n#include \"competitive/std/std.hpp\"\n\
     #include \"competitive/math/number_theory/is_prime.hpp\"\n\nint main() {\n   \
@@ -89,7 +89,7 @@ data:
   isVerificationFile: true
   path: online_test/AOJ/aoj_alds_1_1_c.test.cpp
   requiredBy: []
-  timestamp: '2023-09-06 16:52:30+09:00'
+  timestamp: '2023-09-06 17:09:18+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: online_test/AOJ/aoj_alds_1_1_c.test.cpp
