@@ -2,13 +2,16 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':warning:'
+  - icon: ':heavy_check_mark:'
     path: competitive/std/io.hpp
     title: competitive/std/io.hpp
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: online_test/AOJ/aoj_alds_1_1_c.test.cpp
+    title: online_test/AOJ/aoj_alds_1_1_c.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: '#line 2 "competitive/std/std.hpp"
@@ -227,8 +230,9 @@ data:
   requiredBy:
   - competitive/std/io.hpp
   timestamp: '2023-08-23 06:36:28+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - online_test/AOJ/aoj_alds_1_1_c.test.cpp
 documentation_of: competitive/std/std.hpp
 layout: document
 redirect_from:

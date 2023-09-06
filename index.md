@@ -12,7 +12,7 @@ data:
       title: competitive/graph/topological_sort.hpp
   - name: competitive/math/number_theory
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: competitive/math/number_theory/is_prime.hpp
       title: competitive/math/number_theory/is_prime.hpp
   - name: competitive/std
@@ -20,10 +20,10 @@ data:
     - icon: ':warning:'
       path: competitive/std/debug_print.hpp
       title: competitive/std/debug_print.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: competitive/std/io.hpp
       title: competitive/std/io.hpp
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: competitive/std/std.hpp
       title: competitive/std/std.hpp
   verificationCategories:
@@ -34,7 +34,7 @@ data:
       title: example.test.cpp
   - name: online_test/AOJ
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: online_test/AOJ/aoj_alds_1_1_c.test.cpp
       title: online_test/AOJ/aoj_alds_1_1_c.test.cpp
 layout: toppage
