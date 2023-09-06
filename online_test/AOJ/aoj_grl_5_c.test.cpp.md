@@ -1,23 +1,23 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: competitive/graph/graph_template.hpp
     title: "Graph Template(\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
-  - icon: ':x:'
+  - icon: ':heavy_check_mark:'
     path: competitive/graph/tree/doubling_lowest_common_ancestor.hpp
     title: "Doubling Lowest Common Ancestor (\u6700\u5C0F\u5171\u901A\u7956\u5148)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: competitive/std/io.hpp
     title: competitive/std/io.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: competitive/std/std.hpp
     title: competitive/std/std.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: cpp
-  _verificationStatusIcon: ':x:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C&lang=ja
@@ -107,17 +107,17 @@ data:
     \ i--) {\n            if (parent[i][u] != parent[i][v]) {\n                u =\
     \ parent[i][u];\n                v = parent[i][v];\n            }\n        }\n\
     \        return parent[0][u];\n    }\n\n    int get_dist(int u, int v) {\n   \
-    \     return dist[u] + dist[v] - 2 * dist[get_lca(u, v)];\n    }\n\n    bool is_on_path(int\
-    \ u, int v, int x) {\n        return get_dist(u, x) + get_dist(x, v) == get_dist(u,\
-    \ v);\n    }\n\n    int climb(int u, int k) {\n        if (depth[u] < k) return\
-    \ -1;\n        for (int i = (int)parent.size() - 1; i >= 0; i--)\n           \
-    \ if((k>>i) & 1) u = parent[i][u];\n        return u;\n    }\n};\n#line 6 \"online_test/AOJ/aoj_grl_5_c.test.cpp\"\
-    \n\nint main() {\n    int n;\n    input(n);\n\n    Graph<int> G(n);\n    rep(i,\
-    \ n) {\n        int k;\n        input(k);\n        rep(j, k) {\n            int\
-    \ c;\n            input(c);\n            G.add_edge(i, c);\n        }\n    }\n\
-    \n    DoublingLowestCommonAncestor lca(G);\n\n    int q;\n    input(q);\n    rep(i,\
-    \ q) {\n        int u, v;\n        input(u, v);\n        print(lca.get_lca(u,\
-    \ v));\n    }\n}\n"
+    \     return depth[u] + depth[v] - 2 * depth[get_lca(u, v)];\n    }\n\n    bool\
+    \ is_on_path(int u, int v, int x) {\n        return get_dist(u, x) + get_dist(x,\
+    \ v) == get_dist(u, v);\n    }\n\n    int climb(int u, int k) {\n        if (depth[u]\
+    \ < k) return -1;\n        for (int i = (int)parent.size() - 1; i >= 0; i--)\n\
+    \            if((k>>i) & 1) u = parent[i][u];\n        return u;\n    }\n};\n\
+    #line 6 \"online_test/AOJ/aoj_grl_5_c.test.cpp\"\n\nint main() {\n    int n;\n\
+    \    input(n);\n\n    Graph<int> G(n);\n    rep(i, n) {\n        int k;\n    \
+    \    input(k);\n        rep(j, k) {\n            int c;\n            input(c);\n\
+    \            G.add_edge(i, c);\n        }\n    }\n\n    DoublingLowestCommonAncestor\
+    \ lca(G);\n\n    int q;\n    input(q);\n    rep(i, q) {\n        int u, v;\n \
+    \       input(u, v);\n        print(lca.get_lca(u, v));\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C&lang=ja\"\
     \n\n#include \"competitive/std/io.hpp\"\n#include \"competitive/std/std.hpp\"\n\
     #include \"competitive/graph/tree/doubling_lowest_common_ancestor.hpp\"\n\nint\
@@ -135,8 +135,8 @@ data:
   isVerificationFile: true
   path: online_test/AOJ/aoj_grl_5_c.test.cpp
   requiredBy: []
-  timestamp: '2023-09-06 18:57:34+09:00'
-  verificationStatus: TEST_WRONG_ANSWER
+  timestamp: '2023-09-06 19:00:12+09:00'
+  verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: online_test/AOJ/aoj_grl_5_c.test.cpp
 layout: document

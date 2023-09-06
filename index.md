@@ -3,7 +3,7 @@ data:
   libraryCategories:
   - name: competitive/graph
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: competitive/graph/graph_template.hpp
       title: "Graph Template(\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\
         )"
@@ -14,7 +14,7 @@ data:
       title: competitive/graph/other/topological_sort.hpp
   - name: competitive/graph/tree
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: competitive/graph/tree/doubling_lowest_common_ancestor.hpp
       title: "Doubling Lowest Common Ancestor (\u6700\u5C0F\u5171\u901A\u7956\u5148\
         )"
@@ -28,10 +28,10 @@ data:
     - icon: ':warning:'
       path: competitive/std/debug_print.hpp
       title: competitive/std/debug_print.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: competitive/std/io.hpp
       title: competitive/std/io.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: competitive/std/std.hpp
       title: competitive/std/std.hpp
   verificationCategories:
@@ -45,7 +45,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: online_test/AOJ/aoj_alds_1_1_c.test.cpp
       title: online_test/AOJ/aoj_alds_1_1_c.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: online_test/AOJ/aoj_grl_5_c.test.cpp
       title: online_test/AOJ/aoj_grl_5_c.test.cpp
 layout: toppage

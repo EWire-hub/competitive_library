@@ -4,10 +4,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: competitive/math/number_theory/is_prime.hpp
     title: "Is Prime (\u7D20\u6570\u5224\u5B9A)"
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: competitive/std/io.hpp
     title: competitive/std/io.hpp
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: competitive/std/std.hpp
     title: competitive/std/std.hpp
   _extendedRequiredBy: []
