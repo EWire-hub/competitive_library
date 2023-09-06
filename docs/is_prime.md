@@ -1,5 +1,5 @@
 ---
-title: Is Prime
+title: Is Prime (素数判定)
 documentation_of: //competitive/math/number_theory/is_prime.hpp
 ---
 
