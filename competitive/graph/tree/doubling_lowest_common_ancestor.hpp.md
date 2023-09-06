@@ -1,14 +1,17 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':warning:'
+  - icon: ':x:'
     path: competitive/graph/graph_template.hpp
     title: "Graph Template(\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: online_test/AOJ/aoj_grl_5_c.test.cpp
+    title: online_test/AOJ/aoj_grl_5_c.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     _deprecated_at_docs: docs/doubling_lowest_common_ancestor.md
     document_title: "Doubling Lowest Common Ancestor (\u6700\u5C0F\u5171\u901A\u7956\
@@ -83,8 +86,9 @@ data:
   path: competitive/graph/tree/doubling_lowest_common_ancestor.hpp
   requiredBy: []
   timestamp: '2023-09-06 18:44:41+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - online_test/AOJ/aoj_grl_5_c.test.cpp
 documentation_of: competitive/graph/tree/doubling_lowest_common_ancestor.hpp
 layout: document
 redirect_from:
