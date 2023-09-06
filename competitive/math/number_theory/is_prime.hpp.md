@@ -37,7 +37,7 @@ title: "Is Prime (\u7D20\u6570\u5224\u5B9A)"
 bool is_prime(long long x)
 ```
 
-$x$が素数なら`true`、そうでなければ`false`を返す。
+$x$ が素数なら`true`、そうでなければ`false`を返す。
 
 ## 制約
 - $0 \le x$
