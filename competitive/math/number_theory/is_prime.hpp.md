@@ -27,8 +27,19 @@ data:
   - online_test/AOJ/aoj_alds_1_1_c.test.cpp
 documentation_of: competitive/math/number_theory/is_prime.hpp
 layout: document
-redirect_from:
-- /library/competitive/math/number_theory/is_prime.hpp
-- /library/competitive/math/number_theory/is_prime.hpp.html
-title: competitive/math/number_theory/is_prime.hpp
+title: Is Prime
 ---
+
+# is_prime
+
+```
+bool is_prime(long long x)
+```
+
+$x$が素数なら`true`、そうでなければ`false`を返す。
+
+## 制約
+- $0 \le x$
+
+## 計算量
+- $O(\sqrt(x))$

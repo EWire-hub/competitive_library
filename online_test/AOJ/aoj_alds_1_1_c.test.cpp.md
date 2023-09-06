@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: competitive/math/number_theory/is_prime.hpp
-    title: competitive/math/number_theory/is_prime.hpp
+    title: Is Prime
   - icon: ':heavy_check_mark:'
     path: competitive/std/io.hpp
     title: competitive/std/io.hpp
