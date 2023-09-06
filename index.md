@@ -48,5 +48,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: online_test/AOJ/aoj_grl_5_c.test.cpp
       title: online_test/AOJ/aoj_grl_5_c.test.cpp
+  - name: online_test/Library Checker
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: online_test/Library Checker/yospo_lca.test.cpp
+      title: online_test/Library Checker/yospo_lca.test.cpp
 layout: toppage
 ---
