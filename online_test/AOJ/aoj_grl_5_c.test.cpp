@@ -1,8 +1,8 @@
 #define PROBLEM "https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C&lang=ja"
 
-#include "../std/io.hpp"
-#include "../std/std.hpp"
-#include "../graph/tree/doubling_lowest_common_ancestor.hpp"
+#include "competitive/std/io.hpp"
+#include "competitive/std/std.hpp"
+#include "competitive/graph/tree/doubling_lowest_common_ancestor.hpp"
 
 int main() {
     int n;
