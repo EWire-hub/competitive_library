@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _extendedVerifiedWith:
+  - icon: ':x:'
+    path: online_test/AOJ/aoj_0233.test.cpp
+    title: online_test/AOJ/aoj_0233.test.cpp
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':x:'
   attributes:
     _deprecated_at_docs: docs/convert_base.md
     document_title: "Convert Base (\u9032\u6570\u5909\u63DB)"
@@ -26,8 +29,9 @@ data:
   path: competitive/math/number_theory/convert_base.hpp
   requiredBy: []
   timestamp: '2023-09-08 11:12:09+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_WA
+  verifiedWith:
+  - online_test/AOJ/aoj_0233.test.cpp
 documentation_of: competitive/math/number_theory/convert_base.hpp
 layout: document
 redirect_from:

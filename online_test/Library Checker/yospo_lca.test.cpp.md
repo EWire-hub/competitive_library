@@ -7,10 +7,10 @@ data:
   - icon: ':heavy_check_mark:'
     path: competitive/graph/tree/doubling_lowest_common_ancestor.hpp
     title: "Doubling Lowest Common Ancestor (\u6700\u5C0F\u5171\u901A\u7956\u5148)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: competitive/std/io.hpp
     title: competitive/std/io.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: competitive/std/std.hpp
     title: competitive/std/std.hpp
   _extendedRequiredBy: []

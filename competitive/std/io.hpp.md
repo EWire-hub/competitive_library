@@ -1,11 +1,14 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: competitive/std/std.hpp
     title: competitive/std/std.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith:
+  - icon: ':x:'
+    path: online_test/AOJ/aoj_0233.test.cpp
+    title: online_test/AOJ/aoj_0233.test.cpp
   - icon: ':heavy_check_mark:'
     path: online_test/AOJ/aoj_alds_1_1_c.test.cpp
     title: online_test/AOJ/aoj_alds_1_1_c.test.cpp
@@ -15,9 +18,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: online_test/Library Checker/yospo_lca.test.cpp
     title: online_test/Library Checker/yospo_lca.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     links: []
   bundledCode: "#line 2 \"competitive/std/std.hpp\"\n#include <bits/stdc++.h>\nusing\
@@ -105,10 +108,11 @@ data:
   path: competitive/std/io.hpp
   requiredBy: []
   timestamp: '2023-08-23 06:36:28+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
   - online_test/AOJ/aoj_grl_5_c.test.cpp
   - online_test/AOJ/aoj_alds_1_1_c.test.cpp
+  - online_test/AOJ/aoj_0233.test.cpp
   - online_test/Library Checker/yospo_lca.test.cpp
 documentation_of: competitive/std/io.hpp
 layout: document
