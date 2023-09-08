@@ -20,7 +20,7 @@ data:
         )"
   - name: competitive/math/number_theory
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: competitive/math/number_theory/convert_base.hpp
       title: "Convert Base (\u9032\u6570\u5909\u63DB)"
     - icon: ':heavy_check_mark:'
@@ -31,10 +31,10 @@ data:
     - icon: ':warning:'
       path: competitive/std/debug_print.hpp
       title: competitive/std/debug_print.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: competitive/std/io.hpp
       title: competitive/std/io.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: competitive/std/std.hpp
       title: competitive/std/std.hpp
   verificationCategories:
@@ -45,7 +45,7 @@ data:
       title: example.test.cpp
   - name: online_test/AOJ
     pages:
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: online_test/AOJ/aoj_0233.test.cpp
       title: online_test/AOJ/aoj_0233.test.cpp
     - icon: ':heavy_check_mark:'
