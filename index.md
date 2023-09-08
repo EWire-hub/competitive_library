@@ -20,6 +20,9 @@ data:
         )"
   - name: competitive/math/number_theory
     pages:
+    - icon: ':warning:'
+      path: competitive/math/number_theory/convert_base.hpp
+      title: "Convert Base (\u9032\u6570\u5909\u63DB)"
     - icon: ':heavy_check_mark:'
       path: competitive/math/number_theory/is_prime.hpp
       title: "Is Prime (\u7D20\u6570\u5224\u5B9A)"
