@@ -41,23 +41,24 @@ data:
     #define _overload3(_1, _2, _3, name, ...) name\n#define _rrep(i, n) rrepi(i, n,\
     \ 0)\n#define rrepi(i, a, b) for (int i = int(a - 1); i >= int(b); --i)\n#define\
     \ rrep(...) _overload3(__VA_ARGS__, rrepi, _rrep)(__VA_ARGS__)\n#define all(x)\
-    \ (x).begin(), (x).end()\n\n// function\ntemplate<class T>bool chmax(T &a, const\
-    \ T &b) { if (a<b) { a=b; return 1; } return 0; }\ntemplate<class T>bool chmin(T\
-    \ &a, const T &b) { if (b<a) { a=b; return 1; } return 0; }\n#line 3 \"competitive/std/io.hpp\"\
-    \n\n// input\ntemplate <class T>\nistream &operator>>(istream &is, vector<T> &v)\
-    \ {\n    for (T &in : v) is >> in;\n    return is;\n}\ntemplate <class T, class\
-    \ S>\nistream &operator>>(istream &is, pair<T, S> &p) {\n    is >> p.first >>\
-    \ p.second;\n    return is;\n}\ntemplate <class... T>\nvoid input(T &...a) {\n\
-    \    (cin >> ... >> a);\n}\n\n// output\ntemplate <class T>\nostream &operator<<(ostream\
-    \ &os, const vector<T> &v) {\n    for (int i = 0; i < (int)v.size(); i++) os <<\
-    \ (i == 0 ? \"\" : \" \") << v[i];\n    return os;\n}\ntemplate <class T, class\
-    \ S>\nostream &operator<<(ostream &os, const pair<T, S> &p) {\n    os << p.first\
-    \ << \" \" << p.second;\n    return os;\n}\ntemplate <class T, class S>\nostream\
-    \ &operator<<(ostream &os, const map<T, S> &mp) {\n    for (auto &[key, val] :\
-    \ mp) os << key << \":\" << val << \" \";\n    return os;\n}\ntemplate <class\
-    \ T>\nostream &operator<<(ostream &os, const set<T> &st) {\n    for (auto itr\
-    \ = st.begin(); itr != st.end(); itr++)\n        os << (itr == st.begin() ? \"\
-    \" : \" \") << *itr;\n    return os;\n}\ntemplate <class T>\nostream &operator<<(ostream\
+    \ (x).begin(), (x).end()\n\n// function\ntemplate <class T>\nbool chmax(T &a,\
+    \ const T &b) {\n    if (a < b) {\n        a = b;\n        return 1;\n    }\n\
+    \    return 0;\n}\ntemplate <class T>\nbool chmin(T &a, const T &b) {\n    if\
+    \ (b < a) {\n        a = b;\n        return 1;\n    }\n    return 0;\n}\n#line\
+    \ 3 \"competitive/std/io.hpp\"\n\n// input\ntemplate <class T>\nistream &operator>>(istream\
+    \ &is, vector<T> &v) {\n    for (T &in : v) is >> in;\n    return is;\n}\ntemplate\
+    \ <class T, class S>\nistream &operator>>(istream &is, pair<T, S> &p) {\n    is\
+    \ >> p.first >> p.second;\n    return is;\n}\ntemplate <class... T>\nvoid input(T\
+    \ &...a) {\n    (cin >> ... >> a);\n}\n\n// output\ntemplate <class T>\nostream\
+    \ &operator<<(ostream &os, const vector<T> &v) {\n    for (int i = 0; i < (int)v.size();\
+    \ i++) os << (i == 0 ? \"\" : \" \") << v[i];\n    return os;\n}\ntemplate <class\
+    \ T, class S>\nostream &operator<<(ostream &os, const pair<T, S> &p) {\n    os\
+    \ << p.first << \" \" << p.second;\n    return os;\n}\ntemplate <class T, class\
+    \ S>\nostream &operator<<(ostream &os, const map<T, S> &mp) {\n    for (auto &[key,\
+    \ val] : mp) os << key << \":\" << val << \" \";\n    return os;\n}\ntemplate\
+    \ <class T>\nostream &operator<<(ostream &os, const set<T> &st) {\n    for (auto\
+    \ itr = st.begin(); itr != st.end(); itr++)\n        os << (itr == st.begin()\
+    \ ? \"\" : \" \") << *itr;\n    return os;\n}\ntemplate <class T>\nostream &operator<<(ostream\
     \ &os, const multiset<T> &st) {\n    for (auto itr = st.begin(); itr != st.end();\
     \ itr++)\n        os << (itr == st.begin() ? \"\" : \" \") << *itr;\n    return\
     \ os;\n}\ntemplate <class T>\nostream &operator<<(ostream &os, queue<T> que) {\n\
@@ -107,7 +108,7 @@ data:
   isVerificationFile: false
   path: competitive/std/io.hpp
   requiredBy: []
-  timestamp: '2023-08-23 06:36:28+09:00'
+  timestamp: '2023-09-08 12:12:12+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - online_test/AOJ/aoj_grl_5_c.test.cpp

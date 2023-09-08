@@ -42,38 +42,39 @@ data:
     \ repi, _rep, )(__VA_ARGS__)\n#define _overload3(_1, _2, _3, name, ...) name\n\
     #define _rrep(i, n) rrepi(i, n, 0)\n#define rrepi(i, a, b) for (int i = int(a\
     \ - 1); i >= int(b); --i)\n#define rrep(...) _overload3(__VA_ARGS__, rrepi, _rrep)(__VA_ARGS__)\n\
-    #define all(x) (x).begin(), (x).end()\n\n// function\ntemplate<class T>bool chmax(T\
-    \ &a, const T &b) { if (a<b) { a=b; return 1; } return 0; }\ntemplate<class T>bool\
-    \ chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } return 0; }\n#line 3 \"\
-    competitive/std/io.hpp\"\n\n// input\ntemplate <class T>\nistream &operator>>(istream\
-    \ &is, vector<T> &v) {\n    for (T &in : v) is >> in;\n    return is;\n}\ntemplate\
-    \ <class T, class S>\nistream &operator>>(istream &is, pair<T, S> &p) {\n    is\
-    \ >> p.first >> p.second;\n    return is;\n}\ntemplate <class... T>\nvoid input(T\
-    \ &...a) {\n    (cin >> ... >> a);\n}\n\n// output\ntemplate <class T>\nostream\
-    \ &operator<<(ostream &os, const vector<T> &v) {\n    for (int i = 0; i < (int)v.size();\
-    \ i++) os << (i == 0 ? \"\" : \" \") << v[i];\n    return os;\n}\ntemplate <class\
-    \ T, class S>\nostream &operator<<(ostream &os, const pair<T, S> &p) {\n    os\
-    \ << p.first << \" \" << p.second;\n    return os;\n}\ntemplate <class T, class\
-    \ S>\nostream &operator<<(ostream &os, const map<T, S> &mp) {\n    for (auto &[key,\
-    \ val] : mp) os << key << \":\" << val << \" \";\n    return os;\n}\ntemplate\
-    \ <class T>\nostream &operator<<(ostream &os, const set<T> &st) {\n    for (auto\
-    \ itr = st.begin(); itr != st.end(); itr++)\n        os << (itr == st.begin()\
-    \ ? \"\" : \" \") << *itr;\n    return os;\n}\ntemplate <class T>\nostream &operator<<(ostream\
-    \ &os, const multiset<T> &st) {\n    for (auto itr = st.begin(); itr != st.end();\
-    \ itr++)\n        os << (itr == st.begin() ? \"\" : \" \") << *itr;\n    return\
-    \ os;\n}\ntemplate <class T>\nostream &operator<<(ostream &os, queue<T> que) {\n\
-    \    while (!que.empty()) {\n        os << que.front();\n        que.pop();\n\
-    \        if (!que.empty()) os << \" \";\n    }\n    return os;\n}\ntemplate <class\
-    \ T>\nostream &operator<<(ostream &os, stack<T> st) {\n    while (!st.empty())\
-    \ {\n        os << st.top();\n        st.pop();\n        if (!st.empty()) os <<\
-    \ \" \";\n    }\n    return os;\n}\ntemplate <class T, class Container, class\
-    \ Compare>\nostream &operator<<(ostream &os, priority_queue<T, Container, Compare>\
-    \ pq) {\n    while (!pq.empty()) {\n        os << pq.top();\n        pq.pop();\n\
-    \        if (!pq.empty()) os << \" \";\n    }\n    return os;\n}\nvoid print()\
-    \ { cout << \"\\n\"; }\ntemplate <class T>\nvoid print(const T &a) {\n    cout\
-    \ << a << '\\n';\n}\ntemplate <class T, class... Ts>\nvoid print(const T &a, const\
-    \ Ts &...b) {\n    cout << a;\n    (..., (cout << ' ' << b));\n    cout << '\\\
-    n';\n}\n#line 2 \"competitive/graph/tree/doubling_lowest_common_ancestor.hpp\"\
+    #define all(x) (x).begin(), (x).end()\n\n// function\ntemplate <class T>\nbool\
+    \ chmax(T &a, const T &b) {\n    if (a < b) {\n        a = b;\n        return\
+    \ 1;\n    }\n    return 0;\n}\ntemplate <class T>\nbool chmin(T &a, const T &b)\
+    \ {\n    if (b < a) {\n        a = b;\n        return 1;\n    }\n    return 0;\n\
+    }\n#line 3 \"competitive/std/io.hpp\"\n\n// input\ntemplate <class T>\nistream\
+    \ &operator>>(istream &is, vector<T> &v) {\n    for (T &in : v) is >> in;\n  \
+    \  return is;\n}\ntemplate <class T, class S>\nistream &operator>>(istream &is,\
+    \ pair<T, S> &p) {\n    is >> p.first >> p.second;\n    return is;\n}\ntemplate\
+    \ <class... T>\nvoid input(T &...a) {\n    (cin >> ... >> a);\n}\n\n// output\n\
+    template <class T>\nostream &operator<<(ostream &os, const vector<T> &v) {\n \
+    \   for (int i = 0; i < (int)v.size(); i++) os << (i == 0 ? \"\" : \" \") << v[i];\n\
+    \    return os;\n}\ntemplate <class T, class S>\nostream &operator<<(ostream &os,\
+    \ const pair<T, S> &p) {\n    os << p.first << \" \" << p.second;\n    return\
+    \ os;\n}\ntemplate <class T, class S>\nostream &operator<<(ostream &os, const\
+    \ map<T, S> &mp) {\n    for (auto &[key, val] : mp) os << key << \":\" << val\
+    \ << \" \";\n    return os;\n}\ntemplate <class T>\nostream &operator<<(ostream\
+    \ &os, const set<T> &st) {\n    for (auto itr = st.begin(); itr != st.end(); itr++)\n\
+    \        os << (itr == st.begin() ? \"\" : \" \") << *itr;\n    return os;\n}\n\
+    template <class T>\nostream &operator<<(ostream &os, const multiset<T> &st) {\n\
+    \    for (auto itr = st.begin(); itr != st.end(); itr++)\n        os << (itr ==\
+    \ st.begin() ? \"\" : \" \") << *itr;\n    return os;\n}\ntemplate <class T>\n\
+    ostream &operator<<(ostream &os, queue<T> que) {\n    while (!que.empty()) {\n\
+    \        os << que.front();\n        que.pop();\n        if (!que.empty()) os\
+    \ << \" \";\n    }\n    return os;\n}\ntemplate <class T>\nostream &operator<<(ostream\
+    \ &os, stack<T> st) {\n    while (!st.empty()) {\n        os << st.top();\n  \
+    \      st.pop();\n        if (!st.empty()) os << \" \";\n    }\n    return os;\n\
+    }\ntemplate <class T, class Container, class Compare>\nostream &operator<<(ostream\
+    \ &os, priority_queue<T, Container, Compare> pq) {\n    while (!pq.empty()) {\n\
+    \        os << pq.top();\n        pq.pop();\n        if (!pq.empty()) os << \"\
+    \ \";\n    }\n    return os;\n}\nvoid print() { cout << \"\\n\"; }\ntemplate <class\
+    \ T>\nvoid print(const T &a) {\n    cout << a << '\\n';\n}\ntemplate <class T,\
+    \ class... Ts>\nvoid print(const T &a, const Ts &...b) {\n    cout << a;\n   \
+    \ (..., (cout << ' ' << b));\n    cout << '\\n';\n}\n#line 2 \"competitive/graph/tree/doubling_lowest_common_ancestor.hpp\"\
     \n\n#line 2 \"competitive/graph/graph_template.hpp\"\n\n/**\n * @brief Graph Template(\u30B0\
     \u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)\n */\n\ntemplate <class T =\
     \ long long>\nstruct Edge {\n    int to;\n    T cost;\n    int idx;\n\n    Edge()\
@@ -110,7 +111,7 @@ data:
     \ is_on_path(int u, int v, int x) {\n        return get_dist(u, x) + get_dist(x,\
     \ v) == get_dist(u, v);\n    }\n\n    int climb(int u, int k) {\n        if (depth[u]\
     \ < k) return -1;\n        for (int i = (int)parent.size() - 1; i >= 0; i--)\n\
-    \            if((k>>i) & 1) u = parent[i][u];\n        return u;\n    }\n};\n\
+    \            if ((k >> i) & 1) u = parent[i][u];\n        return u;\n    }\n};\n\
     #line 6 \"online_test/Library Checker/yospo_lca.test.cpp\"\n\nint main(){\n  \
     \  int N, Q; input(N, Q);\n\n    Graph<int> G(N);\n    rep(i, 1, N){\n       \
     \ int p; input(p);\n        G.add_edge(i, p);\n    }\n\n    DoublingLowestCommonAncestor\
@@ -130,7 +131,7 @@ data:
   isVerificationFile: true
   path: online_test/Library Checker/yospo_lca.test.cpp
   requiredBy: []
-  timestamp: '2023-09-06 20:08:44+09:00'
+  timestamp: '2023-09-08 12:12:12+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: online_test/Library Checker/yospo_lca.test.cpp

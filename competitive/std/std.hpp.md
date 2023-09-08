@@ -23,222 +23,56 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
-  bundledCode: '#line 2 "competitive/std/std.hpp"
-
-    #include <bits/stdc++.h>
-
-    using namespace std;
-
-
-    // type name
-
-    using lint = long long;
-
-    using ld = long double;
-
-    using PII = pair<int, int>;
-
-    using PLL = pair<lint, lint>;
-
-    using VI = vector<int>;
-
-    using VVI = vector<VI>;
-
-    using VVVI = vector<VVI>;
-
-    using VLL = vector<lint>;
-
-    using VVLL = vector<VLL>;
-
-    using VVVLL = vector<VVLL>;
-
-    using VB = vector<bool>;
-
-    using VVB = vector<VB>;
-
-    using VVVB = vector<VVB>;
-
-    using VLD = vector<ld>;
-
-    using VVLD = vector<VLD>;
-
-    using VVVLD = vector<VVLD>;
-
-    using VPII = vector<PII>;
-
-    using VVPII = vector<VPII>;
-
-    using VPLL = vector<PLL>;
-
-    using VVPLL = vector<VPLL>;
-
-    using VS = vector<string>;
-
-    using VVS = vector<VS>;
-
-    using VC = vector<char>;
-
-    template <class T>
-
-    using PQ_max = priority_queue<T>;
-
-    template <class T>
-
-    using PQ_min = priority_queue<T, vector<T>, greater<T>>;
-
-
-    // constant
-
-    constexpr ld EPS = 1e-10;
-
-    const ld PI = acosl(-1.0);
-
-    constexpr int INF = 1e9;
-
-    constexpr lint LINF = 1e18;
-
-
-    // macro
-
-    #define _overload3(_1, _2, _3, name, ...) name
-
-    #define _rep(i, n) repi(i, 0, n)
-
-    #define repi(i, a, b) for (int i = int(a); i < int(b); ++i)
-
-    #define rep(...) _overload3(__VA_ARGS__, repi, _rep, )(__VA_ARGS__)
-
-    #define _overload3(_1, _2, _3, name, ...) name
-
-    #define _rrep(i, n) rrepi(i, n, 0)
-
-    #define rrepi(i, a, b) for (int i = int(a - 1); i >= int(b); --i)
-
-    #define rrep(...) _overload3(__VA_ARGS__, rrepi, _rrep)(__VA_ARGS__)
-
-    #define all(x) (x).begin(), (x).end()
-
-
-    // function
-
-    template<class T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return 1; } return
-    0; }
-
-    template<class T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } return
-    0; }
-
-    '
-  code: '#pragma once
-
-    #include <bits/stdc++.h>
-
-    using namespace std;
-
-
-    // type name
-
-    using lint = long long;
-
-    using ld = long double;
-
-    using PII = pair<int, int>;
-
-    using PLL = pair<lint, lint>;
-
-    using VI = vector<int>;
-
-    using VVI = vector<VI>;
-
-    using VVVI = vector<VVI>;
-
-    using VLL = vector<lint>;
-
-    using VVLL = vector<VLL>;
-
-    using VVVLL = vector<VVLL>;
-
-    using VB = vector<bool>;
-
-    using VVB = vector<VB>;
-
-    using VVVB = vector<VVB>;
-
-    using VLD = vector<ld>;
-
-    using VVLD = vector<VLD>;
-
-    using VVVLD = vector<VVLD>;
-
-    using VPII = vector<PII>;
-
-    using VVPII = vector<VPII>;
-
-    using VPLL = vector<PLL>;
-
-    using VVPLL = vector<VPLL>;
-
-    using VS = vector<string>;
-
-    using VVS = vector<VS>;
-
-    using VC = vector<char>;
-
-    template <class T>
-
-    using PQ_max = priority_queue<T>;
-
-    template <class T>
-
-    using PQ_min = priority_queue<T, vector<T>, greater<T>>;
-
-
-    // constant
-
-    constexpr ld EPS = 1e-10;
-
-    const ld PI = acosl(-1.0);
-
-    constexpr int INF = 1e9;
-
-    constexpr lint LINF = 1e18;
-
-
-    // macro
-
-    #define _overload3(_1, _2, _3, name, ...) name
-
-    #define _rep(i, n) repi(i, 0, n)
-
-    #define repi(i, a, b) for (int i = int(a); i < int(b); ++i)
-
-    #define rep(...) _overload3(__VA_ARGS__, repi, _rep, )(__VA_ARGS__)
-
-    #define _overload3(_1, _2, _3, name, ...) name
-
-    #define _rrep(i, n) rrepi(i, n, 0)
-
-    #define rrepi(i, a, b) for (int i = int(a - 1); i >= int(b); --i)
-
-    #define rrep(...) _overload3(__VA_ARGS__, rrepi, _rrep)(__VA_ARGS__)
-
-    #define all(x) (x).begin(), (x).end()
-
-
-    // function
-
-    template<class T>bool chmax(T &a, const T &b) { if (a<b) { a=b; return 1; } return
-    0; }
-
-    template<class T>bool chmin(T &a, const T &b) { if (b<a) { a=b; return 1; } return
-    0; }
-
-    '
+  bundledCode: "#line 2 \"competitive/std/std.hpp\"\n#include <bits/stdc++.h>\nusing\
+    \ namespace std;\n\n// type name\nusing lint = long long;\nusing ld = long double;\n\
+    using PII = pair<int, int>;\nusing PLL = pair<lint, lint>;\nusing VI = vector<int>;\n\
+    using VVI = vector<VI>;\nusing VVVI = vector<VVI>;\nusing VLL = vector<lint>;\n\
+    using VVLL = vector<VLL>;\nusing VVVLL = vector<VVLL>;\nusing VB = vector<bool>;\n\
+    using VVB = vector<VB>;\nusing VVVB = vector<VVB>;\nusing VLD = vector<ld>;\n\
+    using VVLD = vector<VLD>;\nusing VVVLD = vector<VVLD>;\nusing VPII = vector<PII>;\n\
+    using VVPII = vector<VPII>;\nusing VPLL = vector<PLL>;\nusing VVPLL = vector<VPLL>;\n\
+    using VS = vector<string>;\nusing VVS = vector<VS>;\nusing VC = vector<char>;\n\
+    template <class T>\nusing PQ_max = priority_queue<T>;\ntemplate <class T>\nusing\
+    \ PQ_min = priority_queue<T, vector<T>, greater<T>>;\n\n// constant\nconstexpr\
+    \ ld EPS = 1e-10;\nconst ld PI = acosl(-1.0);\nconstexpr int INF = 1e9;\nconstexpr\
+    \ lint LINF = 1e18;\n\n// macro\n#define _overload3(_1, _2, _3, name, ...) name\n\
+    #define _rep(i, n) repi(i, 0, n)\n#define repi(i, a, b) for (int i = int(a); i\
+    \ < int(b); ++i)\n#define rep(...) _overload3(__VA_ARGS__, repi, _rep, )(__VA_ARGS__)\n\
+    #define _overload3(_1, _2, _3, name, ...) name\n#define _rrep(i, n) rrepi(i, n,\
+    \ 0)\n#define rrepi(i, a, b) for (int i = int(a - 1); i >= int(b); --i)\n#define\
+    \ rrep(...) _overload3(__VA_ARGS__, rrepi, _rrep)(__VA_ARGS__)\n#define all(x)\
+    \ (x).begin(), (x).end()\n\n// function\ntemplate <class T>\nbool chmax(T &a,\
+    \ const T &b) {\n    if (a < b) {\n        a = b;\n        return 1;\n    }\n\
+    \    return 0;\n}\ntemplate <class T>\nbool chmin(T &a, const T &b) {\n    if\
+    \ (b < a) {\n        a = b;\n        return 1;\n    }\n    return 0;\n}\n"
+  code: "#pragma once\n#include <bits/stdc++.h>\nusing namespace std;\n\n// type name\n\
+    using lint = long long;\nusing ld = long double;\nusing PII = pair<int, int>;\n\
+    using PLL = pair<lint, lint>;\nusing VI = vector<int>;\nusing VVI = vector<VI>;\n\
+    using VVVI = vector<VVI>;\nusing VLL = vector<lint>;\nusing VVLL = vector<VLL>;\n\
+    using VVVLL = vector<VVLL>;\nusing VB = vector<bool>;\nusing VVB = vector<VB>;\n\
+    using VVVB = vector<VVB>;\nusing VLD = vector<ld>;\nusing VVLD = vector<VLD>;\n\
+    using VVVLD = vector<VVLD>;\nusing VPII = vector<PII>;\nusing VVPII = vector<VPII>;\n\
+    using VPLL = vector<PLL>;\nusing VVPLL = vector<VPLL>;\nusing VS = vector<string>;\n\
+    using VVS = vector<VS>;\nusing VC = vector<char>;\ntemplate <class T>\nusing PQ_max\
+    \ = priority_queue<T>;\ntemplate <class T>\nusing PQ_min = priority_queue<T, vector<T>,\
+    \ greater<T>>;\n\n// constant\nconstexpr ld EPS = 1e-10;\nconst ld PI = acosl(-1.0);\n\
+    constexpr int INF = 1e9;\nconstexpr lint LINF = 1e18;\n\n// macro\n#define _overload3(_1,\
+    \ _2, _3, name, ...) name\n#define _rep(i, n) repi(i, 0, n)\n#define repi(i, a,\
+    \ b) for (int i = int(a); i < int(b); ++i)\n#define rep(...) _overload3(__VA_ARGS__,\
+    \ repi, _rep, )(__VA_ARGS__)\n#define _overload3(_1, _2, _3, name, ...) name\n\
+    #define _rrep(i, n) rrepi(i, n, 0)\n#define rrepi(i, a, b) for (int i = int(a\
+    \ - 1); i >= int(b); --i)\n#define rrep(...) _overload3(__VA_ARGS__, rrepi, _rrep)(__VA_ARGS__)\n\
+    #define all(x) (x).begin(), (x).end()\n\n// function\ntemplate <class T>\nbool\
+    \ chmax(T &a, const T &b) {\n    if (a < b) {\n        a = b;\n        return\
+    \ 1;\n    }\n    return 0;\n}\ntemplate <class T>\nbool chmin(T &a, const T &b)\
+    \ {\n    if (b < a) {\n        a = b;\n        return 1;\n    }\n    return 0;\n\
+    }\n"
   dependsOn: []
   isVerificationFile: false
   path: competitive/std/std.hpp
   requiredBy:
   - competitive/std/io.hpp
-  timestamp: '2023-08-23 06:36:28+09:00'
+  timestamp: '2023-09-08 12:12:12+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - online_test/AOJ/aoj_grl_5_c.test.cpp

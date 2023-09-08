@@ -57,7 +57,7 @@ data:
     \ is_on_path(int u, int v, int x) {\n        return get_dist(u, x) + get_dist(x,\
     \ v) == get_dist(u, v);\n    }\n\n    int climb(int u, int k) {\n        if (depth[u]\
     \ < k) return -1;\n        for (int i = (int)parent.size() - 1; i >= 0; i--)\n\
-    \            if((k>>i) & 1) u = parent[i][u];\n        return u;\n    }\n};\n"
+    \            if ((k >> i) & 1) u = parent[i][u];\n        return u;\n    }\n};\n"
   code: "#pragma once\n\n#include \"../graph_template.hpp\"\n\n/**\n * @brief Doubling\
     \ Lowest Common Ancestor (\u6700\u5C0F\u5171\u901A\u7956\u5148)\n * @docs docs/doubling_lowest_common_ancestor.md\n\
     \ */\n\ntemplate <typename T>\nstruct DoublingLowestCommonAncestor : Graph<T>\
@@ -82,13 +82,13 @@ data:
     \ is_on_path(int u, int v, int x) {\n        return get_dist(u, x) + get_dist(x,\
     \ v) == get_dist(u, v);\n    }\n\n    int climb(int u, int k) {\n        if (depth[u]\
     \ < k) return -1;\n        for (int i = (int)parent.size() - 1; i >= 0; i--)\n\
-    \            if((k>>i) & 1) u = parent[i][u];\n        return u;\n    }\n};"
+    \            if ((k >> i) & 1) u = parent[i][u];\n        return u;\n    }\n};"
   dependsOn:
   - competitive/graph/graph_template.hpp
   isVerificationFile: false
   path: competitive/graph/tree/doubling_lowest_common_ancestor.hpp
   requiredBy: []
-  timestamp: '2023-09-06 19:00:12+09:00'
+  timestamp: '2023-09-08 12:12:12+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - online_test/AOJ/aoj_grl_5_c.test.cpp
