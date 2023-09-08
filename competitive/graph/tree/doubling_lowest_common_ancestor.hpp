@@ -60,7 +60,7 @@ struct DoublingLowestCommonAncestor : Graph<T> {
     int climb(int u, int k) {
         if (depth[u] < k) return -1;
         for (int i = (int)parent.size() - 1; i >= 0; i--)
-            if((k>>i) & 1) u = parent[i][u];
+            if ((k >> i) & 1) u = parent[i][u];
         return u;
     }
 };
