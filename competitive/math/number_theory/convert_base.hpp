@@ -14,5 +14,7 @@ vector<T> convert_base(T x, T b) {
         x -= res.back();
         x /= b;
     }
+    if(res.empty()) res.push_back(0);
+    reverse(res.begin(), res.end());
     return res;
 }
