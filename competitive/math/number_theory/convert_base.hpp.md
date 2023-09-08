@@ -41,3 +41,11 @@ redirect_from:
 - /library/competitive/math/number_theory/convert_base.hpp.html
 title: "Convert Base (\u9032\u6570\u5909\u63DB)"
 ---
+# convert_base
+```
+vector<T> convert_base(T x, T b)
+```
+10進数 $x$ を $b$ 進数に変換した結果を返す。
+
+## 計算量
+- $O(\log_b x)$
