@@ -8,16 +8,14 @@ data:
   _verificationStatusIcon: ':warning:'
   attributes:
     links: []
-  bundledCode: '#line 1 "competitive/graph/other/topological_sort.hpp"
-
-
-    '
-  code: ''
+  bundledCode: "#line 1 \"competitive/graph/other/topological_sort.hpp\"\n// test\r\
+    \n"
+  code: "// test\r\n"
   dependsOn: []
   isVerificationFile: false
   path: competitive/graph/other/topological_sort.hpp
   requiredBy: []
-  timestamp: '2023-09-06 17:28:14+09:00'
+  timestamp: '2023-09-15 23:20:56+09:00'
   verificationStatus: LIBRARY_NO_TESTS
   verifiedWith: []
 documentation_of: competitive/graph/other/topological_sort.hpp
