@@ -3,7 +3,7 @@ data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
     path: competitive/date_structure/unionfind/unionfind.hpp
-    title: competitive/date_structure/unionfind/unionfind.hpp
+    title: Union Find
   - icon: ':heavy_check_mark:'
     path: competitive/std/io.hpp
     title: competitive/std/io.hpp
@@ -72,22 +72,23 @@ data:
     \ { cout << \"\\n\"; }\ntemplate <class T>\nvoid print(const T &a) {\n    cout\
     \ << a << '\\n';\n}\ntemplate <class T, class... Ts>\nvoid print(const T &a, const\
     \ Ts &...b) {\n    cout << a;\n    (..., (cout << ' ' << b));\n    cout << '\\\
-    n';\n}\n#line 2 \"competitive/date_structure/unionfind/unionfind.hpp\"\n\nstruct\
-    \ UnionFind {\n    vector<int> par;\n\n    UnionFind() = default;\n    UnionFind(int\
-    \ n) : par(n, -1) {}\n    void init(int n) { par.assign(n, -1); }\n\n    int root(int\
-    \ x) {\n        if(par[x] < 0) return x;\n        return par[x] = root(par[x]);\n\
-    \    }\n\n    bool same(int x, int y){return root(x) == root(y);}\n\n    bool\
-    \ merge(int x, int y){\n        x = root(x), y = root(y);\n        if(x == y)\
-    \ return false;\n        if(par[x] > par[y]) swap(x, y);\n        par[x] += par[y];\n\
-    \        par[y] = x;\n        return true;\n    }\n\n    int size(int x){\n  \
-    \      return -par[root(x)];\n    }\n\n    vector<std::vector<int>> groups() {\n\
-    \        int n = par.size();\n        vector<vector<int>> res(n);\n        for(int\
-    \ i = 0; i< n; i++){\n            res[root(i)].emplace_back(i);\n        }\n \
-    \       res.erase(remove_if(res.begin(), res.end(), [&](vector<int> &v){\n   \
-    \         return v.empty();\n        }), res.end());\n    }\n};\n#line 6 \"online_test/aoj/aoj_dsl_1_a.test.cpp\"\
-    \n\nint main() {\n    int n, q; input(n, q);\n    UnionFind uf(n);\n    rep(i,\
-    \ q){\n        int c, x, y; input(c, x, y);\n        if(c == 0) uf.merge(x, y);\n\
-    \        else {\n            print(uf.same(x, y));\n        }\n    }\n}\n"
+    n';\n}\n#line 2 \"competitive/date_structure/unionfind/unionfind.hpp\"\n\n/**\n\
+    \ * @brief Union Find\n * @docs docs/unionfind.md\n*/\n\nstruct UnionFind {\n\
+    \    vector<int> par;\n\n    UnionFind() = default;\n    UnionFind(int n) : par(n,\
+    \ -1) {}\n\n    int root(int x) {\n        if(par[x] < 0) return x;\n        return\
+    \ par[x] = root(par[x]);\n    }\n\n    bool same(int x, int y){return root(x)\
+    \ == root(y);}\n\n    bool merge(int x, int y){\n        x = root(x), y = root(y);\n\
+    \        if(x == y) return false;\n        if(par[x] > par[y]) swap(x, y);\n \
+    \       par[x] += par[y];\n        par[y] = x;\n        return true;\n    }\n\n\
+    \    int size(int x){\n        return -par[root(x)];\n    }\n\n    vector<vector<int>>\
+    \ groups() {\n        int n = par.size();\n        vector<vector<int>> res(n);\n\
+    \        for(int i = 0; i< n; i++){\n            res[root(i)].emplace_back(i);\n\
+    \        }\n        res.erase(remove_if(res.begin(), res.end(), [&](vector<int>\
+    \ &v){\n            return v.empty();\n        }), res.end());\n    }\n};\n#line\
+    \ 6 \"online_test/aoj/aoj_dsl_1_a.test.cpp\"\n\nint main() {\n    int n, q; input(n,\
+    \ q);\n    UnionFind uf(n);\n    rep(i, q){\n        int c, x, y; input(c, x,\
+    \ y);\n        if(c == 0) uf.merge(x, y);\n        else {\n            print(uf.same(x,\
+    \ y));\n        }\n    }\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A&lang=jp\"\
     \n\n#include \"competitive/std/std.hpp\"\n#include \"competitive/std/io.hpp\"\n\
     #include \"competitive/date_structure/unionfind/unionfind.hpp\"\n\nint main()\
@@ -101,7 +102,7 @@ data:
   isVerificationFile: true
   path: online_test/aoj/aoj_dsl_1_a.test.cpp
   requiredBy: []
-  timestamp: '2023-09-17 13:08:03+09:00'
+  timestamp: '2023-09-17 13:53:08+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: online_test/aoj/aoj_dsl_1_a.test.cpp

@@ -5,7 +5,7 @@ data:
     pages:
     - icon: ':heavy_check_mark:'
       path: competitive/date_structure/unionfind/unionfind.hpp
-      title: competitive/date_structure/unionfind/unionfind.hpp
+      title: Union Find
   - name: competitive/graph
     pages:
     - icon: ':heavy_check_mark:'

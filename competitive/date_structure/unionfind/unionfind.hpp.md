@@ -13,37 +13,40 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
+    _deprecated_at_docs: docs/unionfind.md
+    document_title: Union Find
     links: []
   bundledCode: "#line 2 \"competitive/date_structure/unionfind/unionfind.hpp\"\n\n\
-    struct UnionFind {\n    vector<int> par;\n\n    UnionFind() = default;\n    UnionFind(int\
-    \ n) : par(n, -1) {}\n    void init(int n) { par.assign(n, -1); }\n\n    int root(int\
-    \ x) {\n        if(par[x] < 0) return x;\n        return par[x] = root(par[x]);\n\
-    \    }\n\n    bool same(int x, int y){return root(x) == root(y);}\n\n    bool\
-    \ merge(int x, int y){\n        x = root(x), y = root(y);\n        if(x == y)\
-    \ return false;\n        if(par[x] > par[y]) swap(x, y);\n        par[x] += par[y];\n\
-    \        par[y] = x;\n        return true;\n    }\n\n    int size(int x){\n  \
-    \      return -par[root(x)];\n    }\n\n    vector<std::vector<int>> groups() {\n\
-    \        int n = par.size();\n        vector<vector<int>> res(n);\n        for(int\
-    \ i = 0; i< n; i++){\n            res[root(i)].emplace_back(i);\n        }\n \
-    \       res.erase(remove_if(res.begin(), res.end(), [&](vector<int> &v){\n   \
-    \         return v.empty();\n        }), res.end());\n    }\n};\n"
-  code: "#pragma once\n\nstruct UnionFind {\n    vector<int> par;\n\n    UnionFind()\
-    \ = default;\n    UnionFind(int n) : par(n, -1) {}\n    void init(int n) { par.assign(n,\
-    \ -1); }\n\n    int root(int x) {\n        if(par[x] < 0) return x;\n        return\
-    \ par[x] = root(par[x]);\n    }\n\n    bool same(int x, int y){return root(x)\
-    \ == root(y);}\n\n    bool merge(int x, int y){\n        x = root(x), y = root(y);\n\
-    \        if(x == y) return false;\n        if(par[x] > par[y]) swap(x, y);\n \
-    \       par[x] += par[y];\n        par[y] = x;\n        return true;\n    }\n\n\
-    \    int size(int x){\n        return -par[root(x)];\n    }\n\n    vector<std::vector<int>>\
-    \ groups() {\n        int n = par.size();\n        vector<vector<int>> res(n);\n\
-    \        for(int i = 0; i< n; i++){\n            res[root(i)].emplace_back(i);\n\
+    /**\n * @brief Union Find\n * @docs docs/unionfind.md\n*/\n\nstruct UnionFind\
+    \ {\n    vector<int> par;\n\n    UnionFind() = default;\n    UnionFind(int n)\
+    \ : par(n, -1) {}\n\n    int root(int x) {\n        if(par[x] < 0) return x;\n\
+    \        return par[x] = root(par[x]);\n    }\n\n    bool same(int x, int y){return\
+    \ root(x) == root(y);}\n\n    bool merge(int x, int y){\n        x = root(x),\
+    \ y = root(y);\n        if(x == y) return false;\n        if(par[x] > par[y])\
+    \ swap(x, y);\n        par[x] += par[y];\n        par[y] = x;\n        return\
+    \ true;\n    }\n\n    int size(int x){\n        return -par[root(x)];\n    }\n\
+    \n    vector<vector<int>> groups() {\n        int n = par.size();\n        vector<vector<int>>\
+    \ res(n);\n        for(int i = 0; i< n; i++){\n            res[root(i)].emplace_back(i);\n\
     \        }\n        res.erase(remove_if(res.begin(), res.end(), [&](vector<int>\
-    \ &v){\n            return v.empty();\n        }), res.end());\n    }\n};"
+    \ &v){\n            return v.empty();\n        }), res.end());\n    }\n};\n"
+  code: "#pragma once\n\n/**\n * @brief Union Find\n * @docs docs/unionfind.md\n*/\n\
+    \nstruct UnionFind {\n    vector<int> par;\n\n    UnionFind() = default;\n   \
+    \ UnionFind(int n) : par(n, -1) {}\n\n    int root(int x) {\n        if(par[x]\
+    \ < 0) return x;\n        return par[x] = root(par[x]);\n    }\n\n    bool same(int\
+    \ x, int y){return root(x) == root(y);}\n\n    bool merge(int x, int y){\n   \
+    \     x = root(x), y = root(y);\n        if(x == y) return false;\n        if(par[x]\
+    \ > par[y]) swap(x, y);\n        par[x] += par[y];\n        par[y] = x;\n    \
+    \    return true;\n    }\n\n    int size(int x){\n        return -par[root(x)];\n\
+    \    }\n\n    vector<vector<int>> groups() {\n        int n = par.size();\n  \
+    \      vector<vector<int>> res(n);\n        for(int i = 0; i< n; i++){\n     \
+    \       res[root(i)].emplace_back(i);\n        }\n        res.erase(remove_if(res.begin(),\
+    \ res.end(), [&](vector<int> &v){\n            return v.empty();\n        }),\
+    \ res.end());\n    }\n};"
   dependsOn: []
   isVerificationFile: false
   path: competitive/date_structure/unionfind/unionfind.hpp
   requiredBy: []
-  timestamp: '2023-09-17 12:35:03+09:00'
+  timestamp: '2023-09-17 13:53:08+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - online_test/aoj/aoj_dsl_1_a.test.cpp
@@ -53,5 +56,24 @@ layout: document
 redirect_from:
 - /library/competitive/date_structure/unionfind/unionfind.hpp
 - /library/competitive/date_structure/unionfind/unionfind.hpp.html
-title: competitive/date_structure/unionfind/unionfind.hpp
+title: Union Find
 ---
+## 概要
+素集合の合併( $x$ が属する集合と $y$ が属する集合をまとめる)，$x,y$ が同じ集合に属するかの判定を高速に行う．
+
+## コンストラクタ
+```
+UnionFind(int n)
+```
+$n$ 個の集合を作成する．集合 $i (0\le i <n)$ には要素 $i$ のみが属する．計算量: $O(n)$．
+
+## 関数
+- `root(x)`: $x$ が属する集合の代表元を返す．
+- `same(x, y)`: $x$ と $y$ が同じ集合に属するかを判定する．
+- `merge(x, y)`: $x$ が属する集合と $y$ が属する集合を合併する．$x,y$ がもともと同じ集合に属していたら`false`を返す．
+- `size(x)`: $x$ が属する集合の要素数を返す．
+- `groups()`: 各集合に含まれる要素を列挙する．集合内の要素は昇順だが，集合の順番は未定義．
+
+## 計算量
+- `root(x), same(x, y), merge(x, y), size(x)`: amortized $O(\alpha(n))$
+- `groups()`: $O(n)$
