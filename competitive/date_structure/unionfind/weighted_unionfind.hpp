@@ -32,7 +32,8 @@ struct WeightedUnionFind {
     bool merge(int x, int y, T w) {
         w += weight(x);
         w -= weight(y);
-        x = root(x), y = root(y);
+        x = root(x);
+        y = root(y);
         if (x == y) return false;
         if (par[x] > par[y]) {
             swap(x, y);
