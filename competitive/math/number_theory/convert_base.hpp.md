@@ -4,8 +4,8 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: online_test/AOJ/aoj_0233.test.cpp
-    title: online_test/AOJ/aoj_0233.test.cpp
+    path: online_test/aoj/aoj_0233.test.cpp
+    title: online_test/aoj/aoj_0233.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -33,7 +33,7 @@ data:
   timestamp: '2023-09-08 12:12:12+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - online_test/AOJ/aoj_0233.test.cpp
+  - online_test/aoj/aoj_0233.test.cpp
 documentation_of: competitive/math/number_theory/convert_base.hpp
 layout: document
 redirect_from:

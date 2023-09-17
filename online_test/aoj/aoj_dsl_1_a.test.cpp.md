@@ -20,7 +20,7 @@ data:
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A&lang=jp
     links:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A&lang=jp
-  bundledCode: "#line 1 \"online_test/AOJ/aoj_dsl_1_a.test.cpp\"\n#define PROBLEM\
+  bundledCode: "#line 1 \"online_test/aoj/aoj_dsl_1_a.test.cpp\"\n#define PROBLEM\
     \ \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A&lang=jp\"\
     \n\n#line 2 \"competitive/std/std.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
     \ std;\n\n// type name\nusing lint = long long;\nusing ld = long double;\nusing\
@@ -84,7 +84,7 @@ data:
     \        int n = par.size();\n        vector<vector<int>> res(n);\n        for(int\
     \ i = 0; i< n; i++){\n            res[root(i)].emplace_back(i);\n        }\n \
     \       res.erase(remove_if(res.begin(), res.end(), [&](vector<int> &v){\n   \
-    \         return v.empty();\n        }), res.end());\n    }\n};\n#line 6 \"online_test/AOJ/aoj_dsl_1_a.test.cpp\"\
+    \         return v.empty();\n        }), res.end());\n    }\n};\n#line 6 \"online_test/aoj/aoj_dsl_1_a.test.cpp\"\
     \n\nint main() {\n    int n, q; input(n, q);\n    UnionFind uf(n);\n    rep(i,\
     \ q){\n        int c, x, y; input(c, x, y);\n        if(c == 0) uf.merge(x, y);\n\
     \        else {\n            print(uf.same(x, y));\n        }\n    }\n}\n"
@@ -99,15 +99,15 @@ data:
   - competitive/std/io.hpp
   - competitive/date_structure/unionfind/unionfind.hpp
   isVerificationFile: true
-  path: online_test/AOJ/aoj_dsl_1_a.test.cpp
+  path: online_test/aoj/aoj_dsl_1_a.test.cpp
   requiredBy: []
-  timestamp: '2023-09-17 12:35:03+09:00'
+  timestamp: '2023-09-17 13:08:03+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: online_test/AOJ/aoj_dsl_1_a.test.cpp
+documentation_of: online_test/aoj/aoj_dsl_1_a.test.cpp
 layout: document
 redirect_from:
-- /verify/online_test/AOJ/aoj_dsl_1_a.test.cpp
-- /verify/online_test/AOJ/aoj_dsl_1_a.test.cpp.html
-title: online_test/AOJ/aoj_dsl_1_a.test.cpp
+- /verify/online_test/aoj/aoj_dsl_1_a.test.cpp
+- /verify/online_test/aoj/aoj_dsl_1_a.test.cpp.html
+title: online_test/aoj/aoj_dsl_1_a.test.cpp
 ---

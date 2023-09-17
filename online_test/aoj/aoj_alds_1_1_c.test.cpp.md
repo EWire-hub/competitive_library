@@ -20,7 +20,7 @@ data:
     PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C
     links:
     - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C
-  bundledCode: "#line 1 \"online_test/AOJ/aoj_alds_1_1_c.test.cpp\"\n#define PROBLEM\
+  bundledCode: "#line 1 \"online_test/aoj/aoj_alds_1_1_c.test.cpp\"\n#define PROBLEM\
     \ \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C\"\n\n#line\
     \ 2 \"competitive/std/std.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\
     \n// type name\nusing lint = long long;\nusing ld = long double;\nusing PII =\
@@ -75,7 +75,7 @@ data:
     n';\n}\n#line 2 \"competitive/math/number_theory/is_prime.hpp\"\n\nbool is_prime(long\
     \ long x) {\n    if (x <= 1) return false;\n    for (long long i = 2; i * i <=\
     \ x; i++) {\n        if (x % i == 0) return false;\n    }\n    return true;\n\
-    }\n#line 6 \"online_test/AOJ/aoj_alds_1_1_c.test.cpp\"\n\nint main() {\n    int\
+    }\n#line 6 \"online_test/aoj/aoj_alds_1_1_c.test.cpp\"\n\nint main() {\n    int\
     \ N; input(N);\n\n    int ans = 0;\n    rep(i, N){\n        int x; input(x);\n\
     \        if(is_prime(x)) ans++;\n    }\n    print(ans);\n}\n"
   code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=ALDS1_1_C\"\
@@ -88,15 +88,15 @@ data:
   - competitive/std/std.hpp
   - competitive/math/number_theory/is_prime.hpp
   isVerificationFile: true
-  path: online_test/AOJ/aoj_alds_1_1_c.test.cpp
+  path: online_test/aoj/aoj_alds_1_1_c.test.cpp
   requiredBy: []
-  timestamp: '2023-09-08 12:12:12+09:00'
+  timestamp: '2023-09-17 13:08:03+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: online_test/AOJ/aoj_alds_1_1_c.test.cpp
+documentation_of: online_test/aoj/aoj_alds_1_1_c.test.cpp
 layout: document
 redirect_from:
-- /verify/online_test/AOJ/aoj_alds_1_1_c.test.cpp
-- /verify/online_test/AOJ/aoj_alds_1_1_c.test.cpp.html
-title: online_test/AOJ/aoj_alds_1_1_c.test.cpp
+- /verify/online_test/aoj/aoj_alds_1_1_c.test.cpp
+- /verify/online_test/aoj/aoj_alds_1_1_c.test.cpp.html
+title: online_test/aoj/aoj_alds_1_1_c.test.cpp
 ---

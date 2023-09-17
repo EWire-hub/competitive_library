@@ -23,7 +23,7 @@ data:
     PROBLEM: https://judge.yosupo.jp/problem/lca
     links:
     - https://judge.yosupo.jp/problem/lca
-  bundledCode: "#line 1 \"online_test/Library Checker/yosupo_lca.test.cpp\"\n#define\
+  bundledCode: "#line 1 \"online_test/library_checker/yosupo_lca.test.cpp\"\n#define\
     \ PROBLEM \"https://judge.yosupo.jp/problem/lca\"\n\n#line 2 \"competitive/std/std.hpp\"\
     \n#include <bits/stdc++.h>\nusing namespace std;\n\n// type name\nusing lint =\
     \ long long;\nusing ld = long double;\nusing PII = pair<int, int>;\nusing PLL\
@@ -112,7 +112,7 @@ data:
     \ v) == get_dist(u, v);\n    }\n\n    int climb(int u, int k) {\n        if (depth[u]\
     \ < k) return -1;\n        for (int i = (int)parent.size() - 1; i >= 0; i--)\n\
     \            if ((k >> i) & 1) u = parent[i][u];\n        return u;\n    }\n};\n\
-    #line 6 \"online_test/Library Checker/yosupo_lca.test.cpp\"\n\nint main(){\n \
+    #line 6 \"online_test/library_checker/yosupo_lca.test.cpp\"\n\nint main(){\n \
     \   int N, Q; input(N, Q);\n\n    Graph<int> G(N);\n    rep(i, 1, N){\n      \
     \  int p; input(p);\n        G.add_edge(i, p);\n    }\n\n    DoublingLowestCommonAncestor\
     \ lca(G);\n    rep(i, Q){\n        int u, v; input(u, v);\n        print(lca.get_lca(u,\
@@ -129,15 +129,15 @@ data:
   - competitive/graph/tree/doubling_lowest_common_ancestor.hpp
   - competitive/graph/graph_template.hpp
   isVerificationFile: true
-  path: online_test/Library Checker/yosupo_lca.test.cpp
+  path: online_test/library_checker/yosupo_lca.test.cpp
   requiredBy: []
-  timestamp: '2023-09-17 12:41:18+09:00'
+  timestamp: '2023-09-17 13:08:03+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: online_test/Library Checker/yosupo_lca.test.cpp
+documentation_of: online_test/library_checker/yosupo_lca.test.cpp
 layout: document
 redirect_from:
-- /verify/online_test/Library Checker/yosupo_lca.test.cpp
-- /verify/online_test/Library Checker/yosupo_lca.test.cpp.html
-title: online_test/Library Checker/yosupo_lca.test.cpp
+- /verify/online_test/library_checker/yosupo_lca.test.cpp
+- /verify/online_test/library_checker/yosupo_lca.test.cpp.html
+title: online_test/library_checker/yosupo_lca.test.cpp
 ---

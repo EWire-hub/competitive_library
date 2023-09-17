@@ -23,7 +23,7 @@ data:
     PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C&lang=ja
     links:
     - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C&lang=ja
-  bundledCode: "#line 1 \"online_test/AOJ/aoj_grl_5_c.test.cpp\"\n#define PROBLEM\
+  bundledCode: "#line 1 \"online_test/aoj/aoj_grl_5_c.test.cpp\"\n#define PROBLEM\
     \ \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_5_C&lang=ja\"\
     \n\n#line 2 \"competitive/std/std.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
     \ std;\n\n// type name\nusing lint = long long;\nusing ld = long double;\nusing\
@@ -113,7 +113,7 @@ data:
     \ v) == get_dist(u, v);\n    }\n\n    int climb(int u, int k) {\n        if (depth[u]\
     \ < k) return -1;\n        for (int i = (int)parent.size() - 1; i >= 0; i--)\n\
     \            if ((k >> i) & 1) u = parent[i][u];\n        return u;\n    }\n};\n\
-    #line 6 \"online_test/AOJ/aoj_grl_5_c.test.cpp\"\n\nint main() {\n    int n;\n\
+    #line 6 \"online_test/aoj/aoj_grl_5_c.test.cpp\"\n\nint main() {\n    int n;\n\
     \    input(n);\n\n    Graph<int> G(n);\n    rep(i, n) {\n        int k;\n    \
     \    input(k);\n        rep(j, k) {\n            int c;\n            input(c);\n\
     \            G.add_edge(i, c);\n        }\n    }\n\n    DoublingLowestCommonAncestor\
@@ -134,15 +134,15 @@ data:
   - competitive/graph/tree/doubling_lowest_common_ancestor.hpp
   - competitive/graph/graph_template.hpp
   isVerificationFile: true
-  path: online_test/AOJ/aoj_grl_5_c.test.cpp
+  path: online_test/aoj/aoj_grl_5_c.test.cpp
   requiredBy: []
-  timestamp: '2023-09-08 12:12:12+09:00'
+  timestamp: '2023-09-17 13:08:03+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: online_test/AOJ/aoj_grl_5_c.test.cpp
+documentation_of: online_test/aoj/aoj_grl_5_c.test.cpp
 layout: document
 redirect_from:
-- /verify/online_test/AOJ/aoj_grl_5_c.test.cpp
-- /verify/online_test/AOJ/aoj_grl_5_c.test.cpp.html
-title: online_test/AOJ/aoj_grl_5_c.test.cpp
+- /verify/online_test/aoj/aoj_grl_5_c.test.cpp
+- /verify/online_test/aoj/aoj_grl_5_c.test.cpp.html
+title: online_test/aoj/aoj_grl_5_c.test.cpp
 ---

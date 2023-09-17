@@ -48,27 +48,27 @@ data:
     - icon: ':heavy_check_mark:'
       path: example.test.cpp
       title: example.test.cpp
-  - name: online_test/AOJ
+  - name: online_test/aoj
     pages:
     - icon: ':heavy_check_mark:'
-      path: online_test/AOJ/aoj_0233.test.cpp
-      title: online_test/AOJ/aoj_0233.test.cpp
+      path: online_test/aoj/aoj_0233.test.cpp
+      title: online_test/aoj/aoj_0233.test.cpp
     - icon: ':heavy_check_mark:'
-      path: online_test/AOJ/aoj_alds_1_1_c.test.cpp
-      title: online_test/AOJ/aoj_alds_1_1_c.test.cpp
+      path: online_test/aoj/aoj_alds_1_1_c.test.cpp
+      title: online_test/aoj/aoj_alds_1_1_c.test.cpp
     - icon: ':heavy_check_mark:'
-      path: online_test/AOJ/aoj_dsl_1_a.test.cpp
-      title: online_test/AOJ/aoj_dsl_1_a.test.cpp
+      path: online_test/aoj/aoj_dsl_1_a.test.cpp
+      title: online_test/aoj/aoj_dsl_1_a.test.cpp
     - icon: ':heavy_check_mark:'
-      path: online_test/AOJ/aoj_grl_5_c.test.cpp
-      title: online_test/AOJ/aoj_grl_5_c.test.cpp
-  - name: online_test/Library Checker
+      path: online_test/aoj/aoj_grl_5_c.test.cpp
+      title: online_test/aoj/aoj_grl_5_c.test.cpp
+  - name: online_test/library_checker
     pages:
     - icon: ':heavy_check_mark:'
-      path: online_test/Library Checker/yosupo_lca.test.cpp
-      title: online_test/Library Checker/yosupo_lca.test.cpp
+      path: online_test/library_checker/yosupo_lca.test.cpp
+      title: online_test/library_checker/yosupo_lca.test.cpp
     - icon: ':heavy_check_mark:'
-      path: online_test/Library Checker/yosupo_unionfind.test.cpp
-      title: online_test/Library Checker/yosupo_unionfind.test.cpp
+      path: online_test/library_checker/yosupo_unionfind.test.cpp
+      title: online_test/library_checker/yosupo_unionfind.test.cpp
 layout: toppage
 ---

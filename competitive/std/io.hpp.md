@@ -7,23 +7,23 @@ data:
   _extendedRequiredBy: []
   _extendedVerifiedWith:
   - icon: ':heavy_check_mark:'
-    path: online_test/AOJ/aoj_0233.test.cpp
-    title: online_test/AOJ/aoj_0233.test.cpp
+    path: online_test/aoj/aoj_0233.test.cpp
+    title: online_test/aoj/aoj_0233.test.cpp
   - icon: ':heavy_check_mark:'
-    path: online_test/AOJ/aoj_alds_1_1_c.test.cpp
-    title: online_test/AOJ/aoj_alds_1_1_c.test.cpp
+    path: online_test/aoj/aoj_alds_1_1_c.test.cpp
+    title: online_test/aoj/aoj_alds_1_1_c.test.cpp
   - icon: ':heavy_check_mark:'
-    path: online_test/AOJ/aoj_dsl_1_a.test.cpp
-    title: online_test/AOJ/aoj_dsl_1_a.test.cpp
+    path: online_test/aoj/aoj_dsl_1_a.test.cpp
+    title: online_test/aoj/aoj_dsl_1_a.test.cpp
   - icon: ':heavy_check_mark:'
-    path: online_test/AOJ/aoj_grl_5_c.test.cpp
-    title: online_test/AOJ/aoj_grl_5_c.test.cpp
+    path: online_test/aoj/aoj_grl_5_c.test.cpp
+    title: online_test/aoj/aoj_grl_5_c.test.cpp
   - icon: ':heavy_check_mark:'
-    path: online_test/Library Checker/yosupo_lca.test.cpp
-    title: online_test/Library Checker/yosupo_lca.test.cpp
+    path: online_test/library_checker/yosupo_lca.test.cpp
+    title: online_test/library_checker/yosupo_lca.test.cpp
   - icon: ':heavy_check_mark:'
-    path: online_test/Library Checker/yosupo_unionfind.test.cpp
-    title: online_test/Library Checker/yosupo_unionfind.test.cpp
+    path: online_test/library_checker/yosupo_unionfind.test.cpp
+    title: online_test/library_checker/yosupo_unionfind.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -117,12 +117,12 @@ data:
   timestamp: '2023-09-08 12:12:12+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - online_test/AOJ/aoj_grl_5_c.test.cpp
-  - online_test/AOJ/aoj_alds_1_1_c.test.cpp
-  - online_test/AOJ/aoj_0233.test.cpp
-  - online_test/AOJ/aoj_dsl_1_a.test.cpp
-  - online_test/Library Checker/yosupo_unionfind.test.cpp
-  - online_test/Library Checker/yosupo_lca.test.cpp
+  - online_test/aoj/aoj_grl_5_c.test.cpp
+  - online_test/aoj/aoj_alds_1_1_c.test.cpp
+  - online_test/aoj/aoj_0233.test.cpp
+  - online_test/aoj/aoj_dsl_1_a.test.cpp
+  - online_test/library_checker/yosupo_unionfind.test.cpp
+  - online_test/library_checker/yosupo_lca.test.cpp
 documentation_of: competitive/std/io.hpp
 layout: document
 redirect_from:

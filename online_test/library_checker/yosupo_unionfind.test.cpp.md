@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: competitive/math/number_theory/convert_base.hpp
-    title: "Convert Base (\u9032\u6570\u5909\u63DB)"
+    path: competitive/date_structure/unionfind/unionfind.hpp
+    title: competitive/date_structure/unionfind/unionfind.hpp
   - icon: ':heavy_check_mark:'
     path: competitive/std/io.hpp
     title: competitive/std/io.hpp
@@ -17,15 +17,15 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0233
+    PROBLEM: https://judge.yosupo.jp/problem/unionfind
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0233
-  bundledCode: "#line 1 \"online_test/AOJ/aoj_0233.test.cpp\"\n#define PROBLEM \"\
-    https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0233\"\n\n#line 2 \"\
-    competitive/std/std.hpp\"\n#include <bits/stdc++.h>\nusing namespace std;\n\n\
-    // type name\nusing lint = long long;\nusing ld = long double;\nusing PII = pair<int,\
-    \ int>;\nusing PLL = pair<lint, lint>;\nusing VI = vector<int>;\nusing VVI = vector<VI>;\n\
-    using VVVI = vector<VVI>;\nusing VLL = vector<lint>;\nusing VVLL = vector<VLL>;\n\
+    - https://judge.yosupo.jp/problem/unionfind
+  bundledCode: "#line 1 \"online_test/library_checker/yosupo_unionfind.test.cpp\"\n\
+    #define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\n#line 2 \"competitive/std/std.hpp\"\
+    \n#include <bits/stdc++.h>\nusing namespace std;\n\n// type name\nusing lint =\
+    \ long long;\nusing ld = long double;\nusing PII = pair<int, int>;\nusing PLL\
+    \ = pair<lint, lint>;\nusing VI = vector<int>;\nusing VVI = vector<VI>;\nusing\
+    \ VVVI = vector<VVI>;\nusing VLL = vector<lint>;\nusing VVLL = vector<VLL>;\n\
     using VVVLL = vector<VVLL>;\nusing VB = vector<bool>;\nusing VVB = vector<VB>;\n\
     using VVVB = vector<VVB>;\nusing VLD = vector<ld>;\nusing VVLD = vector<VLD>;\n\
     using VVVLD = vector<VVLD>;\nusing VPII = vector<PII>;\nusing VVPII = vector<VPII>;\n\
@@ -71,36 +71,43 @@ data:
     \ \";\n    }\n    return os;\n}\nvoid print() { cout << \"\\n\"; }\ntemplate <class\
     \ T>\nvoid print(const T &a) {\n    cout << a << '\\n';\n}\ntemplate <class T,\
     \ class... Ts>\nvoid print(const T &a, const Ts &...b) {\n    cout << a;\n   \
-    \ (..., (cout << ' ' << b));\n    cout << '\\n';\n}\n#line 2 \"competitive/math/number_theory/convert_base.hpp\"\
-    \n\n/**\n * @brief Convert Base (\u9032\u6570\u5909\u63DB)\n * @docs docs/convert_base.md\n\
-    \ */\n\ntemplate <typename T = long long>\nvector<T> convert_base(T x, T b) {\n\
-    \    vector<T> res;\n    while (x) {\n        res.push_back(x % abs(b));\n   \
-    \     if (res.back() < 0) res.back() += abs(b);\n        x -= res.back();\n  \
-    \      x /= b;\n    }\n    if (res.empty()) res.push_back(0);\n    reverse(res.begin(),\
-    \ res.end());\n    return res;\n}\n#line 6 \"online_test/AOJ/aoj_0233.test.cpp\"\
-    \n\nint main(){\n    lint base = -10;\n\n    while(true){\n        lint A; input(A);\n\
-    \        if(A == 0) break;\n        auto res = convert_base(A, base);\n      \
-    \  rep(i, res.size()) cout << res[i];\n        cout << \"\\n\";\n    }\n}\n"
-  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=0233\"\
-    \n\n#include \"competitive/std/std.hpp\"\n#include \"competitive/std/io.hpp\"\n\
-    #include \"competitive/math/number_theory/convert_base.hpp\"\n\nint main(){\n\
-    \    lint base = -10;\n\n    while(true){\n        lint A; input(A);\n       \
-    \ if(A == 0) break;\n        auto res = convert_base(A, base);\n        rep(i,\
-    \ res.size()) cout << res[i];\n        cout << \"\\n\";\n    }\n}"
+    \ (..., (cout << ' ' << b));\n    cout << '\\n';\n}\n#line 2 \"competitive/date_structure/unionfind/unionfind.hpp\"\
+    \n\nstruct UnionFind {\n    vector<int> par;\n\n    UnionFind() = default;\n \
+    \   UnionFind(int n) : par(n, -1) {}\n    void init(int n) { par.assign(n, -1);\
+    \ }\n\n    int root(int x) {\n        if(par[x] < 0) return x;\n        return\
+    \ par[x] = root(par[x]);\n    }\n\n    bool same(int x, int y){return root(x)\
+    \ == root(y);}\n\n    bool merge(int x, int y){\n        x = root(x), y = root(y);\n\
+    \        if(x == y) return false;\n        if(par[x] > par[y]) swap(x, y);\n \
+    \       par[x] += par[y];\n        par[y] = x;\n        return true;\n    }\n\n\
+    \    int size(int x){\n        return -par[root(x)];\n    }\n\n    vector<std::vector<int>>\
+    \ groups() {\n        int n = par.size();\n        vector<vector<int>> res(n);\n\
+    \        for(int i = 0; i< n; i++){\n            res[root(i)].emplace_back(i);\n\
+    \        }\n        res.erase(remove_if(res.begin(), res.end(), [&](vector<int>\
+    \ &v){\n            return v.empty();\n        }), res.end());\n    }\n};\n#line\
+    \ 6 \"online_test/library_checker/yosupo_unionfind.test.cpp\"\n\nint main() {\n\
+    \    int n, q; input(n, q);\n    UnionFind uf(n);\n    rep(i, q){\n        int\
+    \ c, x, y; input(c, x, y);\n        if(c == 0) uf.merge(x, y);\n        else {\n\
+    \            print(uf.same(x, y));\n        }\n    }\n}\n"
+  code: "#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\n#include\
+    \ \"competitive/std/std.hpp\"\n#include \"competitive/std/io.hpp\"\n#include \"\
+    competitive/date_structure/unionfind/unionfind.hpp\"\n\nint main() {\n    int\
+    \ n, q; input(n, q);\n    UnionFind uf(n);\n    rep(i, q){\n        int c, x,\
+    \ y; input(c, x, y);\n        if(c == 0) uf.merge(x, y);\n        else {\n   \
+    \         print(uf.same(x, y));\n        }\n    }\n}"
   dependsOn:
   - competitive/std/std.hpp
   - competitive/std/io.hpp
-  - competitive/math/number_theory/convert_base.hpp
+  - competitive/date_structure/unionfind/unionfind.hpp
   isVerificationFile: true
-  path: online_test/AOJ/aoj_0233.test.cpp
+  path: online_test/library_checker/yosupo_unionfind.test.cpp
   requiredBy: []
-  timestamp: '2023-09-08 12:12:12+09:00'
+  timestamp: '2023-09-17 13:08:03+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: online_test/AOJ/aoj_0233.test.cpp
+documentation_of: online_test/library_checker/yosupo_unionfind.test.cpp
 layout: document
 redirect_from:
-- /verify/online_test/AOJ/aoj_0233.test.cpp
-- /verify/online_test/AOJ/aoj_0233.test.cpp.html
-title: online_test/AOJ/aoj_0233.test.cpp
+- /verify/online_test/library_checker/yosupo_unionfind.test.cpp
+- /verify/online_test/library_checker/yosupo_unionfind.test.cpp.html
+title: online_test/library_checker/yosupo_unionfind.test.cpp
 ---
