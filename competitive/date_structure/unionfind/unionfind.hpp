@@ -1,11 +1,15 @@
 #pragma once
 
+/**
+ * @brief Union Find
+ * @docs docs/unionfind.md
+*/
+
 struct UnionFind {
     vector<int> par;
 
     UnionFind() = default;
     UnionFind(int n) : par(n, -1) {}
-    void init(int n) { par.assign(n, -1); }
 
     int root(int x) {
         if(par[x] < 0) return x;
@@ -27,7 +31,7 @@ struct UnionFind {
         return -par[root(x)];
     }
 
-    vector<std::vector<int>> groups() {
+    vector<vector<int>> groups() {
         int n = par.size();
         vector<vector<int>> res(n);
         for(int i = 0; i< n; i++){
