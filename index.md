@@ -1,6 +1,11 @@
 ---
 data:
   libraryCategories:
+  - name: competitive/date_structure/unionfind
+    pages:
+    - icon: ':heavy_check_mark:'
+      path: competitive/date_structure/unionfind/unionfind.hpp
+      title: competitive/date_structure/unionfind/unionfind.hpp
   - name: competitive/graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -51,6 +56,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: online_test/AOJ/aoj_alds_1_1_c.test.cpp
       title: online_test/AOJ/aoj_alds_1_1_c.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: online_test/AOJ/aoj_dls_1_a.test.cpp
+      title: online_test/AOJ/aoj_dls_1_a.test.cpp
     - icon: ':heavy_check_mark:'
       path: online_test/AOJ/aoj_grl_5_c.test.cpp
       title: online_test/AOJ/aoj_grl_5_c.test.cpp
