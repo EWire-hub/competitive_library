@@ -79,20 +79,20 @@ data:
     \ n) : par(n, -1), diff_weight(n, 0) {}\n\n    int root(int x) {\n        if (par[x]\
     \ < 0) return x;\n        int r = root(par[x]);\n        diff_weight[x] += diff_weight[par[x]];\n\
     \        return par[x] = r;\n    }\n\n    T weight(int x) {\n        root(x);\n\
-    \        return diff_weight[x];\n    }\n\n    T diff(int x, int y) { return weight(y)\
-    \ - weight(x); }\n\n    bool same(int x, int y) { return root(x) == root(y); }\n\
-    \n    bool merge(int x, int y, T w) {\n        w += weight(x);\n        w -= weight(y);\n\
-    \        x = root(x);\n        y = root(y);\n        if (x == y) return false;\n\
-    \        if (par[x] > par[y]) {\n            swap(x, y);\n            w *= -1;\n\
-    \        }\n        par[x] += par[y];\n        par[y] = x;\n        diff_weight[y]\
-    \ = w;\n        return true;\n    }\n\n    int size(int x) { return -par[root(x)];\
-    \ }\n};\n#line 6 \"online_test/aoj/aoj_dsl_1_b.test.cpp\"\n\nint main() {\n  \
-    \  int n, q;\n    input(n, q);\n\n    WeightedUnionFind<int> uf(n);\n    while\
-    \ (q--) {\n        int t;\n        input(t);\n        if (t == 0) {\n        \
-    \    int x, y, z;\n            input(x, y, z);\n            uf.merge(x, y, z);\n\
-    \        } else {\n            int x, y;\n            input(x, y);\n         \
-    \   if (uf.same(x, y))\n                print(uf.diff(x, y));\n            else\n\
-    \                print('?');\n        }\n    }\n}\n"
+    \        return diff_weight[x];\n    }\n\n    T diff(int x, int y) {\n       \
+    \ assert(same(x, y));\n        return weight(y) - weight(x);\n    }\n\n    bool\
+    \ same(int x, int y) { return root(x) == root(y); }\n\n    bool merge(int x, int\
+    \ y, T w) {\n        w += weight(x);\n        w -= weight(y);\n        x = root(x);\n\
+    \        y = root(y);\n        if (x == y) return false;\n        if (par[x] >\
+    \ par[y]) {\n            swap(x, y);\n            w *= -1;\n        }\n      \
+    \  par[x] += par[y];\n        par[y] = x;\n        diff_weight[y] = w;\n     \
+    \   return true;\n    }\n};\n#line 6 \"online_test/aoj/aoj_dsl_1_b.test.cpp\"\n\
+    \nint main() {\n    int n, q;\n    input(n, q);\n\n    WeightedUnionFind<int>\
+    \ uf(n);\n    while (q--) {\n        int t;\n        input(t);\n        if (t\
+    \ == 0) {\n            int x, y, z;\n            input(x, y, z);\n           \
+    \ uf.merge(x, y, z);\n        } else {\n            int x, y;\n            input(x,\
+    \ y);\n            if (uf.same(x, y))\n                print(uf.diff(x, y));\n\
+    \            else\n                print('?');\n        }\n    }\n}\n"
   code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_B&lang=ja\"\
     \n\n#include \"competitive/std/io.hpp\"\n#include \"competitive/std/std.hpp\"\n\
     #include \"competitive/date_structure/unionfind/weighted_unionfind.hpp\"\n\nint\
@@ -109,7 +109,7 @@ data:
   isVerificationFile: true
   path: online_test/aoj/aoj_dsl_1_b.test.cpp
   requiredBy: []
-  timestamp: '2023-09-17 19:46:20+09:00'
+  timestamp: '2023-09-18 01:33:45+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: online_test/aoj/aoj_dsl_1_b.test.cpp
