@@ -10,8 +10,8 @@ data:
     path: online_test/AOJ/aoj_grl_5_c.test.cpp
     title: online_test/AOJ/aoj_grl_5_c.test.cpp
   - icon: ':heavy_check_mark:'
-    path: online_test/Library Checker/yospo_lca.test.cpp
-    title: online_test/Library Checker/yospo_lca.test.cpp
+    path: online_test/Library Checker/yosupo_lca.test.cpp
+    title: online_test/Library Checker/yosupo_lca.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -92,7 +92,7 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - online_test/AOJ/aoj_grl_5_c.test.cpp
-  - online_test/Library Checker/yospo_lca.test.cpp
+  - online_test/Library Checker/yosupo_lca.test.cpp
 documentation_of: competitive/graph/tree/doubling_lowest_common_ancestor.hpp
 layout: document
 redirect_from:

@@ -65,8 +65,8 @@ data:
   - name: online_test/Library Checker
     pages:
     - icon: ':heavy_check_mark:'
-      path: online_test/Library Checker/yospo_lca.test.cpp
-      title: online_test/Library Checker/yospo_lca.test.cpp
+      path: online_test/Library Checker/yosupo_lca.test.cpp
+      title: online_test/Library Checker/yosupo_lca.test.cpp
     - icon: ':heavy_check_mark:'
       path: online_test/Library Checker/yosupo_unionfind.test.cpp
       title: online_test/Library Checker/yosupo_unionfind.test.cpp
