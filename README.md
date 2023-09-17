@@ -6,8 +6,7 @@
 [Document](https://EWire-hub.github.io/competitive_library)
 
 todo:
-- UnionFind
-- 重み付きUnionFind
+- 重み付きUnionFind (doc)
 - ModInt
 - 二項係数
 

@@ -2,8 +2,8 @@
 data:
   _extendedDependsOn:
   - icon: ':heavy_check_mark:'
-    path: competitive/date_structure/unionfind/unionfind.hpp
-    title: Union Find
+    path: competitive/date_structure/unionfind/weighted_unionfind.hpp
+    title: "\u91CD\u307F\u4ED8\u304D Union Find"
   - icon: ':heavy_check_mark:'
     path: competitive/std/io.hpp
     title: competitive/std/io.hpp
@@ -17,11 +17,11 @@ data:
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A&lang=jp
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_B&lang=ja
     links:
-    - http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A&lang=jp
-  bundledCode: "#line 1 \"online_test/aoj/aoj_dsl_1_a.test.cpp\"\n#define PROBLEM\
-    \ \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A&lang=jp\"\
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_B&lang=ja
+  bundledCode: "#line 1 \"online_test/aoj/aoj_dsl_1_b.test.cpp\"\n#define PROBLEM\
+    \ \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_B&lang=ja\"\
     \n\n#line 2 \"competitive/std/std.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
     \ std;\n\n// type name\nusing lint = long long;\nusing ld = long double;\nusing\
     \ PII = pair<int, int>;\nusing PLL = pair<lint, lint>;\nusing VI = vector<int>;\n\
@@ -72,43 +72,50 @@ data:
     \ { cout << \"\\n\"; }\ntemplate <class T>\nvoid print(const T &a) {\n    cout\
     \ << a << '\\n';\n}\ntemplate <class T, class... Ts>\nvoid print(const T &a, const\
     \ Ts &...b) {\n    cout << a;\n    (..., (cout << ' ' << b));\n    cout << '\\\
-    n';\n}\n#line 2 \"competitive/date_structure/unionfind/unionfind.hpp\"\n\n/**\n\
-    \ * @brief Union Find\n * @docs docs/unionfind.md\n */\n\nstruct UnionFind {\n\
-    \    vector<int> par;\n\n    UnionFind() = default;\n    UnionFind(int n) : par(n,\
-    \ -1) {}\n\n    int root(int x) {\n        if (par[x] < 0) return x;\n       \
-    \ return par[x] = root(par[x]);\n    }\n\n    bool same(int x, int y) { return\
-    \ root(x) == root(y); }\n\n    bool merge(int x, int y) {\n        x = root(x),\
-    \ y = root(y);\n        if (x == y) return false;\n        if (par[x] > par[y])\
-    \ swap(x, y);\n        par[x] += par[y];\n        par[y] = x;\n        return\
-    \ true;\n    }\n\n    int size(int x) { return -par[root(x)]; }\n\n    vector<vector<int>>\
-    \ groups() {\n        int n = (int)par.size();\n        vector<vector<int>> res(n);\n\
-    \        for (int i = 0; i < n; i++) {\n            res[root(i)].emplace_back(i);\n\
-    \        }\n        res.erase(remove_if(res.begin(), res.end(),\n            \
-    \                [&](vector<int> &v) { return v.empty(); }),\n               \
-    \   res.end());\n        return res;\n    }\n};\n#line 6 \"online_test/aoj/aoj_dsl_1_a.test.cpp\"\
-    \n\nint main() {\n    int n, q; input(n, q);\n    UnionFind uf(n);\n    rep(i,\
-    \ q){\n        int c, x, y; input(c, x, y);\n        if(c == 0) uf.merge(x, y);\n\
-    \        else {\n            print(uf.same(x, y));\n        }\n    }\n}\n"
-  code: "#define PROBLEM \"http://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_A&lang=jp\"\
-    \n\n#include \"competitive/std/std.hpp\"\n#include \"competitive/std/io.hpp\"\n\
-    #include \"competitive/date_structure/unionfind/unionfind.hpp\"\n\nint main()\
-    \ {\n    int n, q; input(n, q);\n    UnionFind uf(n);\n    rep(i, q){\n      \
-    \  int c, x, y; input(c, x, y);\n        if(c == 0) uf.merge(x, y);\n        else\
-    \ {\n            print(uf.same(x, y));\n        }\n    }\n}"
+    n';\n}\n#line 2 \"competitive/date_structure/unionfind/weighted_unionfind.hpp\"\
+    \n\n/**\n * @brief \u91CD\u307F\u4ED8\u304D Union Find\n * @docs docs/weighted_unionfind.md\n\
+    \ */\n\ntemplate <typename T>\nstruct WeightedUnionFind {\n    vector<int> par;\n\
+    \    vector<T> diff_weight;\n\n    WeightedUnionFind() = default;\n    WeightedUnionFind(int\
+    \ n) : par(n, -1), diff_weight(n, 0) {}\n\n    int root(int x) {\n        if (par[x]\
+    \ < 0) return x;\n        int r = root(par[x]);\n        diff_weight[x] += diff_weight[par[x]];\n\
+    \        return par[x] = r;\n    }\n\n    T weight(int x) {\n        root(x);\n\
+    \        return diff_weight[x];\n    }\n\n    T diff(int x, int y) { return weight(y)\
+    \ - weight(x); }\n\n    bool same(int x, int y) { return root(x) == root(y); }\n\
+    \n    bool merge(int x, int y, T w) {\n        w += weight(x);\n        w -= weight(y);\n\
+    \        x = root(x);\n        y = root(y);\n        if (x == y) return false;\n\
+    \        if (par[x] > par[y]) {\n            swap(x, y);\n            w *= -1;\n\
+    \        }\n        par[x] += par[y];\n        par[y] = x;\n        diff_weight[y]\
+    \ = w;\n        return true;\n    }\n\n    int size(int x) { return -par[root(x)];\
+    \ }\n};\n#line 6 \"online_test/aoj/aoj_dsl_1_b.test.cpp\"\n\nint main() {\n  \
+    \  int n, q;\n    input(n, q);\n\n    WeightedUnionFind<int> uf(n);\n    while\
+    \ (q--) {\n        int t;\n        input(t);\n        if (t == 0) {\n        \
+    \    int x, y, z;\n            input(x, y, z);\n            uf.merge(x, y, z);\n\
+    \        } else {\n            int x, y;\n            input(x, y);\n         \
+    \   if (uf.same(x, y))\n                print(uf.diff(x, y));\n            else\n\
+    \                print('?');\n        }\n    }\n}\n"
+  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_B&lang=ja\"\
+    \n\n#include \"competitive/std/io.hpp\"\n#include \"competitive/std/std.hpp\"\n\
+    #include \"competitive/date_structure/unionfind/weighted_unionfind.hpp\"\n\nint\
+    \ main() {\n    int n, q;\n    input(n, q);\n\n    WeightedUnionFind<int> uf(n);\n\
+    \    while (q--) {\n        int t;\n        input(t);\n        if (t == 0) {\n\
+    \            int x, y, z;\n            input(x, y, z);\n            uf.merge(x,\
+    \ y, z);\n        } else {\n            int x, y;\n            input(x, y);\n\
+    \            if (uf.same(x, y))\n                print(uf.diff(x, y));\n     \
+    \       else\n                print('?');\n        }\n    }\n}"
   dependsOn:
-  - competitive/std/std.hpp
   - competitive/std/io.hpp
-  - competitive/date_structure/unionfind/unionfind.hpp
+  - competitive/std/std.hpp
+  - competitive/date_structure/unionfind/weighted_unionfind.hpp
   isVerificationFile: true
-  path: online_test/aoj/aoj_dsl_1_a.test.cpp
+  path: online_test/aoj/aoj_dsl_1_b.test.cpp
   requiredBy: []
-  timestamp: '2023-09-17 19:10:42+09:00'
+  timestamp: '2023-09-17 19:46:20+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
-documentation_of: online_test/aoj/aoj_dsl_1_a.test.cpp
+documentation_of: online_test/aoj/aoj_dsl_1_b.test.cpp
 layout: document
 redirect_from:
-- /verify/online_test/aoj/aoj_dsl_1_a.test.cpp
-- /verify/online_test/aoj/aoj_dsl_1_a.test.cpp.html
-title: online_test/aoj/aoj_dsl_1_a.test.cpp
+- /verify/online_test/aoj/aoj_dsl_1_b.test.cpp
+- /verify/online_test/aoj/aoj_dsl_1_b.test.cpp.html
+title: online_test/aoj/aoj_dsl_1_b.test.cpp
 ---

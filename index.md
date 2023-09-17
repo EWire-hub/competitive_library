@@ -6,6 +6,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: competitive/date_structure/unionfind/unionfind.hpp
       title: Union Find
+    - icon: ':heavy_check_mark:'
+      path: competitive/date_structure/unionfind/weighted_unionfind.hpp
+      title: "\u91CD\u307F\u4ED8\u304D Union Find"
   - name: competitive/graph
     pages:
     - icon: ':heavy_check_mark:'
@@ -54,6 +57,9 @@ data:
     - icon: ':heavy_check_mark:'
       path: online_test/aoj/aoj_dsl_1_a.test.cpp
       title: online_test/aoj/aoj_dsl_1_a.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: online_test/aoj/aoj_dsl_1_b.test.cpp
+      title: online_test/aoj/aoj_dsl_1_b.test.cpp
     - icon: ':heavy_check_mark:'
       path: online_test/aoj/aoj_grl_5_c.test.cpp
       title: online_test/aoj/aoj_grl_5_c.test.cpp
