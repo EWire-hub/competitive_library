@@ -25,7 +25,10 @@ struct WeightedUnionFind {
         return diff_weight[x];
     }
 
-    T diff(int x, int y) { return weight(y) - weight(x); }
+    T diff(int x, int y) {
+        assert(same(x, y));
+        return weight(y) - weight(x);
+    }
 
     bool same(int x, int y) { return root(x) == root(y); }
 
@@ -44,6 +47,4 @@ struct WeightedUnionFind {
         diff_weight[y] = w;
         return true;
     }
-
-    int size(int x) { return -par[root(x)]; }
 };
