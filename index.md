@@ -57,8 +57,8 @@ data:
       path: online_test/AOJ/aoj_alds_1_1_c.test.cpp
       title: online_test/AOJ/aoj_alds_1_1_c.test.cpp
     - icon: ':heavy_check_mark:'
-      path: online_test/AOJ/aoj_dls_1_a.test.cpp
-      title: online_test/AOJ/aoj_dls_1_a.test.cpp
+      path: online_test/AOJ/aoj_dsl_1_a.test.cpp
+      title: online_test/AOJ/aoj_dsl_1_a.test.cpp
     - icon: ':heavy_check_mark:'
       path: online_test/AOJ/aoj_grl_5_c.test.cpp
       title: online_test/AOJ/aoj_grl_5_c.test.cpp
@@ -67,5 +67,8 @@ data:
     - icon: ':heavy_check_mark:'
       path: online_test/Library Checker/yospo_lca.test.cpp
       title: online_test/Library Checker/yospo_lca.test.cpp
+    - icon: ':heavy_check_mark:'
+      path: online_test/Library Checker/yosupo_unionfind.test.cpp
+      title: online_test/Library Checker/yosupo_unionfind.test.cpp
 layout: toppage
 ---
