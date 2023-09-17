@@ -43,11 +43,6 @@ data:
       path: competitive/std/std.hpp
       title: competitive/std/std.hpp
   verificationCategories:
-  - name: .
-    pages:
-    - icon: ':heavy_check_mark:'
-      path: example.test.cpp
-      title: example.test.cpp
   - name: online_test/aoj
     pages:
     - icon: ':heavy_check_mark:'
