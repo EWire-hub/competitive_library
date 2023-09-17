@@ -5,9 +5,6 @@
  * @docs docs/unionfind.md
  */
 
-#include <bits/stdc++.h>
-using namespace std;
-
 struct UnionFind {
     vector<int> par;
 
