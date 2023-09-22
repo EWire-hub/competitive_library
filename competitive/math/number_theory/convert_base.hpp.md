@@ -10,27 +10,27 @@ data:
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
-    _deprecated_at_docs: docs/convert_base.md
+    _deprecated_at_docs: docs/math/number_theory/convert_base.md
     document_title: "Convert Base (\u9032\u6570\u5909\u63DB)"
     links: []
   bundledCode: "#line 2 \"competitive/math/number_theory/convert_base.hpp\"\n\n/**\n\
-    \ * @brief Convert Base (\u9032\u6570\u5909\u63DB)\n * @docs docs/convert_base.md\n\
+    \ * @brief Convert Base (\u9032\u6570\u5909\u63DB)\n * @docs docs/math/number_theory/convert_base.md\n\
     \ */\n\ntemplate <typename T = long long>\nvector<T> convert_base(T x, T b) {\n\
     \    vector<T> res;\n    while (x) {\n        res.push_back(x % abs(b));\n   \
     \     if (res.back() < 0) res.back() += abs(b);\n        x -= res.back();\n  \
     \      x /= b;\n    }\n    if (res.empty()) res.push_back(0);\n    reverse(res.begin(),\
     \ res.end());\n    return res;\n}\n"
   code: "#pragma once\n\n/**\n * @brief Convert Base (\u9032\u6570\u5909\u63DB)\n\
-    \ * @docs docs/convert_base.md\n */\n\ntemplate <typename T = long long>\nvector<T>\
-    \ convert_base(T x, T b) {\n    vector<T> res;\n    while (x) {\n        res.push_back(x\
-    \ % abs(b));\n        if (res.back() < 0) res.back() += abs(b);\n        x -=\
-    \ res.back();\n        x /= b;\n    }\n    if (res.empty()) res.push_back(0);\n\
-    \    reverse(res.begin(), res.end());\n    return res;\n}"
+    \ * @docs docs/math/number_theory/convert_base.md\n */\n\ntemplate <typename T\
+    \ = long long>\nvector<T> convert_base(T x, T b) {\n    vector<T> res;\n    while\
+    \ (x) {\n        res.push_back(x % abs(b));\n        if (res.back() < 0) res.back()\
+    \ += abs(b);\n        x -= res.back();\n        x /= b;\n    }\n    if (res.empty())\
+    \ res.push_back(0);\n    reverse(res.begin(), res.end());\n    return res;\n}"
   dependsOn: []
   isVerificationFile: false
   path: competitive/math/number_theory/convert_base.hpp
   requiredBy: []
-  timestamp: '2023-09-08 12:12:12+09:00'
+  timestamp: '2023-09-22 12:08:10+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - online_test/aoj/aoj_0233.test.cpp

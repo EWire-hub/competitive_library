@@ -1,109 +1,36 @@
 ---
 data:
-  _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: competitive/date_structure/unionfind/unionfind.hpp
-    title: Union Find
-  - icon: ':heavy_check_mark:'
-    path: competitive/std/io.hpp
-    title: competitive/std/io.hpp
-  - icon: ':heavy_check_mark:'
-    path: competitive/std/std.hpp
-    title: competitive/std/std.hpp
+  _extendedDependsOn: []
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
-  attributes:
-    '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.yosupo.jp/problem/unionfind
-    links:
-    - https://judge.yosupo.jp/problem/unionfind
-  bundledCode: "#line 1 \"online_test/library_checker/yosupo_unionfind.test.cpp\"\n\
-    #define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\n#line 2 \"competitive/std/std.hpp\"\
-    \n#include <bits/stdc++.h>\nusing namespace std;\n\n// type name\nusing lint =\
-    \ long long;\nusing ld = long double;\nusing PII = pair<int, int>;\nusing PLL\
-    \ = pair<lint, lint>;\nusing VI = vector<int>;\nusing VVI = vector<VI>;\nusing\
-    \ VVVI = vector<VVI>;\nusing VLL = vector<lint>;\nusing VVLL = vector<VLL>;\n\
-    using VVVLL = vector<VVLL>;\nusing VB = vector<bool>;\nusing VVB = vector<VB>;\n\
-    using VVVB = vector<VVB>;\nusing VLD = vector<ld>;\nusing VVLD = vector<VLD>;\n\
-    using VVVLD = vector<VVLD>;\nusing VPII = vector<PII>;\nusing VVPII = vector<VPII>;\n\
-    using VPLL = vector<PLL>;\nusing VVPLL = vector<VPLL>;\nusing VS = vector<string>;\n\
-    using VVS = vector<VS>;\nusing VC = vector<char>;\ntemplate <class T>\nusing PQ_max\
-    \ = priority_queue<T>;\ntemplate <class T>\nusing PQ_min = priority_queue<T, vector<T>,\
-    \ greater<T>>;\n\n// constant\nconstexpr ld EPS = 1e-10;\nconst ld PI = acosl(-1.0);\n\
-    constexpr int INF = 1e9;\nconstexpr lint LINF = 1e18;\n\n// macro\n#define _overload3(_1,\
-    \ _2, _3, name, ...) name\n#define _rep(i, n) repi(i, 0, n)\n#define repi(i, a,\
-    \ b) for (int i = int(a); i < int(b); ++i)\n#define rep(...) _overload3(__VA_ARGS__,\
-    \ repi, _rep, )(__VA_ARGS__)\n#define _overload3(_1, _2, _3, name, ...) name\n\
-    #define _rrep(i, n) rrepi(i, n, 0)\n#define rrepi(i, a, b) for (int i = int(a\
-    \ - 1); i >= int(b); --i)\n#define rrep(...) _overload3(__VA_ARGS__, rrepi, _rrep)(__VA_ARGS__)\n\
-    #define all(x) (x).begin(), (x).end()\n\n// function\ntemplate <class T>\nbool\
-    \ chmax(T &a, const T &b) {\n    if (a < b) {\n        a = b;\n        return\
-    \ 1;\n    }\n    return 0;\n}\ntemplate <class T>\nbool chmin(T &a, const T &b)\
-    \ {\n    if (b < a) {\n        a = b;\n        return 1;\n    }\n    return 0;\n\
-    }\n#line 3 \"competitive/std/io.hpp\"\n\n// input\ntemplate <class T>\nistream\
-    \ &operator>>(istream &is, vector<T> &v) {\n    for (T &in : v) is >> in;\n  \
-    \  return is;\n}\ntemplate <class T, class S>\nistream &operator>>(istream &is,\
-    \ pair<T, S> &p) {\n    is >> p.first >> p.second;\n    return is;\n}\ntemplate\
-    \ <class... T>\nvoid input(T &...a) {\n    (cin >> ... >> a);\n}\n\n// output\n\
-    template <class T>\nostream &operator<<(ostream &os, const vector<T> &v) {\n \
-    \   for (int i = 0; i < (int)v.size(); i++) os << (i == 0 ? \"\" : \" \") << v[i];\n\
-    \    return os;\n}\ntemplate <class T, class S>\nostream &operator<<(ostream &os,\
-    \ const pair<T, S> &p) {\n    os << p.first << \" \" << p.second;\n    return\
-    \ os;\n}\ntemplate <class T, class S>\nostream &operator<<(ostream &os, const\
-    \ map<T, S> &mp) {\n    for (auto &[key, val] : mp) os << key << \":\" << val\
-    \ << \" \";\n    return os;\n}\ntemplate <class T>\nostream &operator<<(ostream\
-    \ &os, const set<T> &st) {\n    for (auto itr = st.begin(); itr != st.end(); itr++)\n\
-    \        os << (itr == st.begin() ? \"\" : \" \") << *itr;\n    return os;\n}\n\
-    template <class T>\nostream &operator<<(ostream &os, const multiset<T> &st) {\n\
-    \    for (auto itr = st.begin(); itr != st.end(); itr++)\n        os << (itr ==\
-    \ st.begin() ? \"\" : \" \") << *itr;\n    return os;\n}\ntemplate <class T>\n\
-    ostream &operator<<(ostream &os, queue<T> que) {\n    while (!que.empty()) {\n\
-    \        os << que.front();\n        que.pop();\n        if (!que.empty()) os\
-    \ << \" \";\n    }\n    return os;\n}\ntemplate <class T>\nostream &operator<<(ostream\
-    \ &os, stack<T> st) {\n    while (!st.empty()) {\n        os << st.top();\n  \
-    \      st.pop();\n        if (!st.empty()) os << \" \";\n    }\n    return os;\n\
-    }\ntemplate <class T, class Container, class Compare>\nostream &operator<<(ostream\
-    \ &os, priority_queue<T, Container, Compare> pq) {\n    while (!pq.empty()) {\n\
-    \        os << pq.top();\n        pq.pop();\n        if (!pq.empty()) os << \"\
-    \ \";\n    }\n    return os;\n}\nvoid print() { cout << \"\\n\"; }\ntemplate <class\
-    \ T>\nvoid print(const T &a) {\n    cout << a << '\\n';\n}\ntemplate <class T,\
-    \ class... Ts>\nvoid print(const T &a, const Ts &...b) {\n    cout << a;\n   \
-    \ (..., (cout << ' ' << b));\n    cout << '\\n';\n}\n#line 2 \"competitive/date_structure/unionfind/unionfind.hpp\"\
-    \n\n/**\n * @brief Union Find\n * @docs docs/unionfind.md\n */\n\nstruct UnionFind\
-    \ {\n    vector<int> par;\n\n    UnionFind() = default;\n    UnionFind(int n)\
-    \ : par(n, -1) {}\n\n    int root(int x) {\n        if (par[x] < 0) return x;\n\
-    \        return par[x] = root(par[x]);\n    }\n\n    bool same(int x, int y) {\
-    \ return root(x) == root(y); }\n\n    bool merge(int x, int y) {\n        x =\
-    \ root(x), y = root(y);\n        if (x == y) return false;\n        if (par[x]\
-    \ > par[y]) swap(x, y);\n        par[x] += par[y];\n        par[y] = x;\n    \
-    \    return true;\n    }\n\n    int size(int x) { return -par[root(x)]; }\n\n\
-    \    vector<vector<int>> groups() {\n        int n = (int)par.size();\n      \
-    \  vector<vector<int>> res(n);\n        for (int i = 0; i < n; i++) {\n      \
-    \      res[root(i)].emplace_back(i);\n        }\n        res.erase(remove_if(res.begin(),\
-    \ res.end(),\n                            [&](vector<int> &v) { return v.empty();\
-    \ }),\n                  res.end());\n        return res;\n    }\n};\n#line 6\
-    \ \"online_test/library_checker/yosupo_unionfind.test.cpp\"\n\nint main() {\n\
-    \    int n, q; input(n, q);\n    UnionFind uf(n);\n    rep(i, q){\n        int\
-    \ c, x, y; input(c, x, y);\n        if(c == 0) uf.merge(x, y);\n        else {\n\
-    \            print(uf.same(x, y));\n        }\n    }\n}\n"
+  _verificationStatusIcon: ':x:'
+  attributes: {}
+  bundledCode: "Traceback (most recent call last):\n  File \"/opt/hostedtoolcache/Python/3.11.5/x64/lib/python3.11/site-packages/onlinejudge_verify/documentation/build.py\"\
+    , line 71, in _render_source_code_stat\n    bundled_code = language.bundle(stat.path,\
+    \ basedir=basedir, options={'include_paths': [basedir]}).decode()\n          \
+    \         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n\
+    \  File \"/opt/hostedtoolcache/Python/3.11.5/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/cplusplus.py\"\
+    , line 187, in bundle\n    bundler.update(path)\n  File \"/opt/hostedtoolcache/Python/3.11.5/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
+    , line 401, in update\n    self.update(self._resolve(pathlib.Path(included), included_from=path))\n\
+    \                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n \
+    \ File \"/opt/hostedtoolcache/Python/3.11.5/x64/lib/python3.11/site-packages/onlinejudge_verify/languages/cplusplus_bundle.py\"\
+    , line 260, in _resolve\n    raise BundleErrorAt(path, -1, \"no such header\"\
+    )\nonlinejudge_verify.languages.cplusplus_bundle.BundleErrorAt: competitive/date_structure/unionfind/unionfind.hpp:\
+    \ line -1: no such header\n"
   code: "#define PROBLEM \"https://judge.yosupo.jp/problem/unionfind\"\n\n#include\
     \ \"competitive/std/std.hpp\"\n#include \"competitive/std/io.hpp\"\n#include \"\
     competitive/date_structure/unionfind/unionfind.hpp\"\n\nint main() {\n    int\
     \ n, q; input(n, q);\n    UnionFind uf(n);\n    rep(i, q){\n        int c, x,\
     \ y; input(c, x, y);\n        if(c == 0) uf.merge(x, y);\n        else {\n   \
     \         print(uf.same(x, y));\n        }\n    }\n}"
-  dependsOn:
-  - competitive/std/std.hpp
-  - competitive/std/io.hpp
-  - competitive/date_structure/unionfind/unionfind.hpp
+  dependsOn: []
   isVerificationFile: true
   path: online_test/library_checker/yosupo_unionfind.test.cpp
   requiredBy: []
-  timestamp: '2023-09-17 19:10:42+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '1970-01-01 00:00:00+00:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
 documentation_of: online_test/library_checker/yosupo_unionfind.test.cpp
 layout: document

@@ -13,20 +13,11 @@ data:
     path: online_test/aoj/aoj_alds_1_1_c.test.cpp
     title: online_test/aoj/aoj_alds_1_1_c.test.cpp
   - icon: ':heavy_check_mark:'
-    path: online_test/aoj/aoj_dsl_1_a.test.cpp
-    title: online_test/aoj/aoj_dsl_1_a.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: online_test/aoj/aoj_dsl_1_b.test.cpp
-    title: online_test/aoj/aoj_dsl_1_b.test.cpp
-  - icon: ':heavy_check_mark:'
     path: online_test/aoj/aoj_grl_5_c.test.cpp
     title: online_test/aoj/aoj_grl_5_c.test.cpp
   - icon: ':heavy_check_mark:'
     path: online_test/library_checker/yosupo_lca.test.cpp
     title: online_test/library_checker/yosupo_lca.test.cpp
-  - icon: ':heavy_check_mark:'
-    path: online_test/library_checker/yosupo_unionfind.test.cpp
-    title: online_test/library_checker/yosupo_unionfind.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
   _verificationStatusIcon: ':heavy_check_mark:'
@@ -85,11 +76,8 @@ data:
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - online_test/aoj/aoj_grl_5_c.test.cpp
-  - online_test/aoj/aoj_dsl_1_b.test.cpp
   - online_test/aoj/aoj_alds_1_1_c.test.cpp
   - online_test/aoj/aoj_0233.test.cpp
-  - online_test/aoj/aoj_dsl_1_a.test.cpp
-  - online_test/library_checker/yosupo_unionfind.test.cpp
   - online_test/library_checker/yosupo_lca.test.cpp
 documentation_of: competitive/std/std.hpp
 layout: document
