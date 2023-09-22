@@ -2,7 +2,7 @@
 
 /**
  * @brief 重み付き Union Find
- * @docs docs/weighted_unionfind.md
+ * @docs docs/data_structure/unionfind/weighted_unionfind.md
  */
 
 template <typename T>

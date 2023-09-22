@@ -2,7 +2,7 @@
 
 /**
  * @brief Convert Base (進数変換)
- * @docs docs/convert_base.md
+ * @docs docs/math/number_theory/convert_base.md
  */
 
 template <typename T = long long>

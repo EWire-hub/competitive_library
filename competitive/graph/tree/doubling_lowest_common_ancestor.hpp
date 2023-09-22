@@ -4,7 +4,7 @@
 
 /**
  * @brief Doubling Lowest Common Ancestor (最小共通祖先)
- * @docs docs/doubling_lowest_common_ancestor.md
+ * @docs docs/graph/tree/doubling_lowest_common_ancestor.md
  */
 
 template <typename T>

@@ -2,6 +2,7 @@
 
 /**
  * @brief Graph Template(グラフテンプレート)
+ * @docs docs/graph/graph_template.md
  */
 
 template <class T = long long>
