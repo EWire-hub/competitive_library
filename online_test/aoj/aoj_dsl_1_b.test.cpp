@@ -2,7 +2,7 @@
 
 #include "competitive/std/io.hpp"
 #include "competitive/std/std.hpp"
-#include "competitive/date_structure/unionfind/weighted_unionfind.hpp"
+#include "competitive/data_structure/unionfind/weighted_unionfind.hpp"
 
 int main() {
     int n, q;
