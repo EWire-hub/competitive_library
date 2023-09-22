@@ -2,10 +2,13 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy: []
-  _extendedVerifiedWith: []
+  _extendedVerifiedWith:
+  - icon: ':heavy_check_mark:'
+    path: online_test/aoj/aoj_dsl_1_b.test.cpp
+    title: online_test/aoj/aoj_dsl_1_b.test.cpp
   _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':warning:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     _deprecated_at_docs: docs/data_structure/unionfind/weighted_unionfind.md
     document_title: "\u91CD\u307F\u4ED8\u304D Union Find"
@@ -45,8 +48,9 @@ data:
   path: competitive/data_structure/unionfind/weighted_unionfind.hpp
   requiredBy: []
   timestamp: '2023-09-22 12:08:10+09:00'
-  verificationStatus: LIBRARY_NO_TESTS
-  verifiedWith: []
+  verificationStatus: LIBRARY_ALL_AC
+  verifiedWith:
+  - online_test/aoj/aoj_dsl_1_b.test.cpp
 documentation_of: competitive/data_structure/unionfind/weighted_unionfind.hpp
 layout: document
 redirect_from:

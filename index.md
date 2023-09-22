@@ -3,10 +3,10 @@ data:
   libraryCategories:
   - name: competitive/data_structure/unionfind
     pages:
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: competitive/data_structure/unionfind/unionfind.hpp
       title: Union Find
-    - icon: ':warning:'
+    - icon: ':heavy_check_mark:'
       path: competitive/data_structure/unionfind/weighted_unionfind.hpp
       title: "\u91CD\u307F\u4ED8\u304D Union Find"
   - name: competitive/graph
@@ -54,10 +54,10 @@ data:
     - icon: ':heavy_check_mark:'
       path: online_test/aoj/aoj_alds_1_1_c.test.cpp
       title: online_test/aoj/aoj_alds_1_1_c.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: online_test/aoj/aoj_dsl_1_a.test.cpp
       title: online_test/aoj/aoj_dsl_1_a.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: online_test/aoj/aoj_dsl_1_b.test.cpp
       title: online_test/aoj/aoj_dsl_1_b.test.cpp
     - icon: ':heavy_check_mark:'
@@ -68,7 +68,7 @@ data:
     - icon: ':heavy_check_mark:'
       path: online_test/library_checker/yosupo_lca.test.cpp
       title: online_test/library_checker/yosupo_lca.test.cpp
-    - icon: ':x:'
+    - icon: ':heavy_check_mark:'
       path: online_test/library_checker/yosupo_unionfind.test.cpp
       title: online_test/library_checker/yosupo_unionfind.test.cpp
 layout: toppage
