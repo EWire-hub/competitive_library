@@ -12,3 +12,7 @@ todo:
 - 座標圧縮
 - 累積和
 - imos法
+- BIT
+- (平衡二分探索木)
+- stdにgrid内判定を行う関数を追加
+- Doubling Lowest Common Ancestorに距離を求める関数を追加
