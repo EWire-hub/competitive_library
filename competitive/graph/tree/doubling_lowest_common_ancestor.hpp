@@ -12,7 +12,7 @@ struct DoublingLowestCommonAncestor : Graph<T> {
     vector<vector<int>> parent;
     vector<int> depth;
 
-    DoublingLowestCommonAncestor() {}
+    DoublingLowestCommonAncestor() = default;
     DoublingLowestCommonAncestor(const Graph<T> &G, int r = 0) { init(G, r); }
 
     void init(const Graph<T> &G, int r = 0) {
