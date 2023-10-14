@@ -23,7 +23,7 @@ vector<int> topological_sort(const Graph<T> &g) {
         que.pop();
         res.push_back(v);
         for (auto e : g[v]) {
-            if (--in[e.to]) que.push(e.to);
+            if (--in[e.to] == 0) que.push(e.to);
         }
     }
 
