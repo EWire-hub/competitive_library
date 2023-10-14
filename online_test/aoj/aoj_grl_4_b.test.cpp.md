@@ -1,9 +1,12 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
-    path: competitive/data_structure/unionfind/weighted_unionfind.hpp
-    title: "\u91CD\u307F\u4ED8\u304D Union Find"
+  - icon: ':question:'
+    path: competitive/graph/graph_template.hpp
+    title: "Graph Template(\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
+  - icon: ':x:'
+    path: competitive/graph/other/topological_sort.hpp
+    title: competitive/graph/other/topological_sort.hpp
   - icon: ':question:'
     path: competitive/std/io.hpp
     title: competitive/std/io.hpp
@@ -12,16 +15,16 @@ data:
     title: competitive/std/std.hpp
   _extendedRequiredBy: []
   _extendedVerifiedWith: []
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: cpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':x:'
   attributes:
     '*NOT_SPECIAL_COMMENTS*': ''
-    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_B&lang=ja
+    PROBLEM: https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_B
     links:
-    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_B&lang=ja
-  bundledCode: "#line 1 \"online_test/aoj/aoj_dsl_1_b.test.cpp\"\n#define PROBLEM\
-    \ \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_B&lang=ja\"\
+    - https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_B
+  bundledCode: "#line 1 \"online_test/aoj/aoj_grl_4_b.test.cpp\"\n// clang-format\
+    \ off\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_B\"\
     \n\n#line 2 \"competitive/std/std.hpp\"\n#include <bits/stdc++.h>\nusing namespace\
     \ std;\n\n// type name\nusing lint = long long;\nusing ld = long double;\nusing\
     \ PII = pair<int, int>;\nusing PLL = pair<lint, lint>;\nusing VI = vector<int>;\n\
@@ -72,50 +75,53 @@ data:
     \ { cout << \"\\n\"; }\ntemplate <class T>\nvoid print(const T &a) {\n    cout\
     \ << a << '\\n';\n}\ntemplate <class T, class... Ts>\nvoid print(const T &a, const\
     \ Ts &...b) {\n    cout << a;\n    (..., (cout << ' ' << b));\n    cout << '\\\
-    n';\n}\n#line 2 \"competitive/data_structure/unionfind/weighted_unionfind.hpp\"\
-    \n\n/**\n * @brief \u91CD\u307F\u4ED8\u304D Union Find\n * @docs docs/data_structure/unionfind/weighted_unionfind.md\n\
-    \ */\n\ntemplate <typename T>\nstruct WeightedUnionFind {\n    vector<int> par;\n\
-    \    vector<T> diff_weight;\n\n    WeightedUnionFind() = default;\n    WeightedUnionFind(int\
-    \ n) : par(n, -1), diff_weight(n, 0) {}\n\n    int root(int x) {\n        if (par[x]\
-    \ < 0) return x;\n        int r = root(par[x]);\n        diff_weight[x] += diff_weight[par[x]];\n\
-    \        return par[x] = r;\n    }\n\n    T weight(int x) {\n        root(x);\n\
-    \        return diff_weight[x];\n    }\n\n    T diff(int x, int y) {\n       \
-    \ assert(same(x, y));\n        return weight(y) - weight(x);\n    }\n\n    bool\
-    \ same(int x, int y) { return root(x) == root(y); }\n\n    bool merge(int x, int\
-    \ y, T w) {\n        w += weight(x);\n        w -= weight(y);\n        x = root(x);\n\
-    \        y = root(y);\n        if (x == y) return false;\n        if (par[x] >\
-    \ par[y]) {\n            swap(x, y);\n            w *= -1;\n        }\n      \
-    \  par[x] += par[y];\n        par[y] = x;\n        diff_weight[y] = w;\n     \
-    \   return true;\n    }\n};\n#line 6 \"online_test/aoj/aoj_dsl_1_b.test.cpp\"\n\
-    \nint main() {\n    int n, q;\n    input(n, q);\n\n    WeightedUnionFind<int>\
-    \ uf(n);\n    while (q--) {\n        int t;\n        input(t);\n        if (t\
-    \ == 0) {\n            int x, y, z;\n            input(x, y, z);\n           \
-    \ uf.merge(x, y, z);\n        } else {\n            int x, y;\n            input(x,\
-    \ y);\n            if (uf.same(x, y))\n                print(uf.diff(x, y));\n\
-    \            else\n                print('?');\n        }\n    }\n}\n"
-  code: "#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=DSL_1_B&lang=ja\"\
-    \n\n#include \"competitive/std/io.hpp\"\n#include \"competitive/std/std.hpp\"\n\
-    #include \"competitive/data_structure/unionfind/weighted_unionfind.hpp\"\n\nint\
-    \ main() {\n    int n, q;\n    input(n, q);\n\n    WeightedUnionFind<int> uf(n);\n\
-    \    while (q--) {\n        int t;\n        input(t);\n        if (t == 0) {\n\
-    \            int x, y, z;\n            input(x, y, z);\n            uf.merge(x,\
-    \ y, z);\n        } else {\n            int x, y;\n            input(x, y);\n\
-    \            if (uf.same(x, y))\n                print(uf.diff(x, y));\n     \
-    \       else\n                print('?');\n        }\n    }\n}"
+    n';\n}\n#line 2 \"competitive/graph/other/topological_sort.hpp\"\n\r\n#line 2\
+    \ \"competitive/graph/graph_template.hpp\"\n\n/**\n * @brief Graph Template(\u30B0\
+    \u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)\n * @docs docs/graph/graph_template.md\n\
+    \ */\n\ntemplate <class T = long long>\nstruct Edge {\n    int to;\n    T cost;\n\
+    \    int idx;\n\n    Edge() = default;\n    Edge(int to, T cost = 1, int idx =\
+    \ -1) : to(to), cost(cost), idx(idx) {}\n};\n\ntemplate <class T = long long>\n\
+    struct Graph {\n    vector<vector<Edge<T>>> g;\n    int es;\n\n    Graph() = default;\n\
+    \    explicit Graph(int n) : g(n), es(0) {}\n\n    size_t size() const { return\
+    \ g.size(); }\n    void add_edge(int from, int to, T cost = 1, bool direction\
+    \ = false) {\n        if (!direction) g[to].emplace_back(from, cost, es);\n  \
+    \      g[from].emplace_back(to, cost, es++);\n    }\n\n    inline vector<Edge<T>>\
+    \ &operator[](const int &k) { return g[k]; }\n\n    inline const vector<Edge<T>>\
+    \ &operator[](const int &k) const {\n        return g[k];\n    }\n};\n#line 4\
+    \ \"competitive/graph/other/topological_sort.hpp\"\n\r\ntemplate <typename T>\r\
+    \nvector<int> topological_sort(const Graph<T> &g) {\r\n    int n = g.size();\r\
+    \n    vector<int> in(n, 0);\r\n    for (int i = 0; i < n; i++) {\r\n        for\
+    \ (auto e : g[i]) {\r\n            in[e.to]++;\r\n        }\r\n    }\r\n\r\n \
+    \   queue<int> que;\r\n    for (int i = 0; i < n; i++) {\r\n        if (in[i]\
+    \ == 0) que.push(i);\r\n    }\r\n\r\n    vector<int> res;\r\n    while (!que.empty())\
+    \ {\r\n        int v = que.front();\r\n        que.pop();\r\n        res.push_back(v);\r\
+    \n        for (auto e : g[v]) {\r\n            if (--in[e.to] == 0) que.push(e.to);\r\
+    \n        }\r\n    }\r\n\r\n    return res;\r\n}\n#line 7 \"online_test/aoj/aoj_grl_4_b.test.cpp\"\
+    \n\n// clang-format on\nint main() {\n    int V, E;\n    input(V, E);\n    Graph\
+    \ g(V);\n\n    rep(i, E) {\n        int u, v;\n        input(u, v);\n        g.add_edge(u,\
+    \ v, 1, true);\n    }\n\n    VI ans = topological_sort(g);\n    rep(i, V) print(ans[i]);\n\
+    }\n"
+  code: "// clang-format off\n#define PROBLEM \"https://judge.u-aizu.ac.jp/onlinejudge/description.jsp?id=GRL_4_B\"\
+    \n\n#include \"competitive/std/std.hpp\"\n#include \"competitive/std/io.hpp\"\n\
+    #include \"competitive/graph/other/topological_sort.hpp\"\n\n// clang-format on\n\
+    int main() {\n    int V, E;\n    input(V, E);\n    Graph g(V);\n\n    rep(i, E)\
+    \ {\n        int u, v;\n        input(u, v);\n        g.add_edge(u, v, 1, true);\n\
+    \    }\n\n    VI ans = topological_sort(g);\n    rep(i, V) print(ans[i]);\n}"
   dependsOn:
-  - competitive/std/io.hpp
   - competitive/std/std.hpp
-  - competitive/data_structure/unionfind/weighted_unionfind.hpp
+  - competitive/std/io.hpp
+  - competitive/graph/other/topological_sort.hpp
+  - competitive/graph/graph_template.hpp
   isVerificationFile: true
-  path: online_test/aoj/aoj_dsl_1_b.test.cpp
+  path: online_test/aoj/aoj_grl_4_b.test.cpp
   requiredBy: []
-  timestamp: '2023-09-22 12:15:17+09:00'
-  verificationStatus: TEST_ACCEPTED
+  timestamp: '2023-10-14 20:32:41+09:00'
+  verificationStatus: TEST_WRONG_ANSWER
   verifiedWith: []
-documentation_of: online_test/aoj/aoj_dsl_1_b.test.cpp
+documentation_of: online_test/aoj/aoj_grl_4_b.test.cpp
 layout: document
 redirect_from:
-- /verify/online_test/aoj/aoj_dsl_1_b.test.cpp
-- /verify/online_test/aoj/aoj_dsl_1_b.test.cpp.html
-title: online_test/aoj/aoj_dsl_1_b.test.cpp
+- /verify/online_test/aoj/aoj_grl_4_b.test.cpp
+- /verify/online_test/aoj/aoj_grl_4_b.test.cpp.html
+title: online_test/aoj/aoj_grl_4_b.test.cpp
 ---

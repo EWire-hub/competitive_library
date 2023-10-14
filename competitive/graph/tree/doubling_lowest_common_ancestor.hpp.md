@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: competitive/graph/graph_template.hpp
     title: "Graph Template(\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
   _extendedRequiredBy: []
@@ -37,9 +37,9 @@ data:
     \ Doubling Lowest Common Ancestor (\u6700\u5C0F\u5171\u901A\u7956\u5148)\n * @docs\
     \ docs/graph/tree/doubling_lowest_common_ancestor.md\n */\n\ntemplate <typename\
     \ T>\nstruct DoublingLowestCommonAncestor : Graph<T> {\n    vector<vector<int>>\
-    \ parent;\n    vector<int> depth;\n\n    DoublingLowestCommonAncestor() {}\n \
-    \   DoublingLowestCommonAncestor(const Graph<T> &G, int r = 0) { init(G, r); }\n\
-    \n    void init(const Graph<T> &G, int r = 0) {\n        int V = (int)G.size();\n\
+    \ parent;\n    vector<int> depth;\n\n    DoublingLowestCommonAncestor() = default;\n\
+    \    DoublingLowestCommonAncestor(const Graph<T> &G, int r = 0) { init(G, r);\
+    \ }\n\n    void init(const Graph<T> &G, int r = 0) {\n        int V = (int)G.size();\n\
     \        int h = 1;\n        while ((1 << h) < V) h++;\n        parent.assign(h,\
     \ vector<int>(V, -1));\n        depth.assign(V, -1);\n        dfs(G, r, -1, 0);\n\
     \        for (int i = 0; i + 1 < (int)parent.size(); i++)\n            for (int\
@@ -63,24 +63,24 @@ data:
     \ Lowest Common Ancestor (\u6700\u5C0F\u5171\u901A\u7956\u5148)\n * @docs docs/graph/tree/doubling_lowest_common_ancestor.md\n\
     \ */\n\ntemplate <typename T>\nstruct DoublingLowestCommonAncestor : Graph<T>\
     \ {\n    vector<vector<int>> parent;\n    vector<int> depth;\n\n    DoublingLowestCommonAncestor()\
-    \ {}\n    DoublingLowestCommonAncestor(const Graph<T> &G, int r = 0) { init(G,\
-    \ r); }\n\n    void init(const Graph<T> &G, int r = 0) {\n        int V = (int)G.size();\n\
-    \        int h = 1;\n        while ((1 << h) < V) h++;\n        parent.assign(h,\
-    \ vector<int>(V, -1));\n        depth.assign(V, -1);\n        dfs(G, r, -1, 0);\n\
-    \        for (int i = 0; i + 1 < (int)parent.size(); i++)\n            for (int\
-    \ v = 0; v < V; v++)\n                if (parent[i][v] != -1)\n              \
-    \      parent[i + 1][v] = parent[i][parent[i][v]];\n    }\n\n    void dfs(const\
-    \ Graph<T> &G, int v, int p, int d) {\n        parent[0][v] = p;\n        depth[v]\
-    \ = d;\n        for (auto nv : G[v])\n            if (nv.to != p) dfs(G, nv.to,\
-    \ v, d + 1);\n    }\n\n    int get_lca(int u, int v) {\n        if (depth[u] >\
-    \ depth[v]) swap(u, v);\n        for (int i = 0; i < (int)parent.size(); i++)\n\
-    \            if ((depth[v] - depth[u]) & (1 << i)) v = parent[i][v];\n       \
-    \ if (u == v) return u;\n        for (int i = (int)parent.size() - 1; i >= 0;\
-    \ i--) {\n            if (parent[i][u] != parent[i][v]) {\n                u =\
-    \ parent[i][u];\n                v = parent[i][v];\n            }\n        }\n\
-    \        return parent[0][u];\n    }\n\n    int get_dist(int u, int v) {\n   \
-    \     return depth[u] + depth[v] - 2 * depth[get_lca(u, v)];\n    }\n\n    bool\
-    \ is_on_path(int u, int v, int x) {\n        return get_dist(u, x) + get_dist(x,\
+    \ = default;\n    DoublingLowestCommonAncestor(const Graph<T> &G, int r = 0) {\
+    \ init(G, r); }\n\n    void init(const Graph<T> &G, int r = 0) {\n        int\
+    \ V = (int)G.size();\n        int h = 1;\n        while ((1 << h) < V) h++;\n\
+    \        parent.assign(h, vector<int>(V, -1));\n        depth.assign(V, -1);\n\
+    \        dfs(G, r, -1, 0);\n        for (int i = 0; i + 1 < (int)parent.size();\
+    \ i++)\n            for (int v = 0; v < V; v++)\n                if (parent[i][v]\
+    \ != -1)\n                    parent[i + 1][v] = parent[i][parent[i][v]];\n  \
+    \  }\n\n    void dfs(const Graph<T> &G, int v, int p, int d) {\n        parent[0][v]\
+    \ = p;\n        depth[v] = d;\n        for (auto nv : G[v])\n            if (nv.to\
+    \ != p) dfs(G, nv.to, v, d + 1);\n    }\n\n    int get_lca(int u, int v) {\n \
+    \       if (depth[u] > depth[v]) swap(u, v);\n        for (int i = 0; i < (int)parent.size();\
+    \ i++)\n            if ((depth[v] - depth[u]) & (1 << i)) v = parent[i][v];\n\
+    \        if (u == v) return u;\n        for (int i = (int)parent.size() - 1; i\
+    \ >= 0; i--) {\n            if (parent[i][u] != parent[i][v]) {\n            \
+    \    u = parent[i][u];\n                v = parent[i][v];\n            }\n   \
+    \     }\n        return parent[0][u];\n    }\n\n    int get_dist(int u, int v)\
+    \ {\n        return depth[u] + depth[v] - 2 * depth[get_lca(u, v)];\n    }\n\n\
+    \    bool is_on_path(int u, int v, int x) {\n        return get_dist(u, x) + get_dist(x,\
     \ v) == get_dist(u, v);\n    }\n\n    int climb(int u, int k) {\n        if (depth[u]\
     \ < k) return -1;\n        for (int i = (int)parent.size() - 1; i >= 0; i--)\n\
     \            if ((k >> i) & 1) u = parent[i][u];\n        return u;\n    }\n};"
@@ -89,7 +89,7 @@ data:
   isVerificationFile: false
   path: competitive/graph/tree/doubling_lowest_common_ancestor.hpp
   requiredBy: []
-  timestamp: '2023-09-22 12:08:10+09:00'
+  timestamp: '2023-10-14 07:08:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
   - online_test/aoj/aoj_grl_5_c.test.cpp

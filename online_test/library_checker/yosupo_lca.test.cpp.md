@@ -1,16 +1,16 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: competitive/graph/graph_template.hpp
     title: "Graph Template(\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
   - icon: ':heavy_check_mark:'
     path: competitive/graph/tree/doubling_lowest_common_ancestor.hpp
     title: "Doubling Lowest Common Ancestor (\u6700\u5C0F\u5171\u901A\u7956\u5148)"
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: competitive/std/io.hpp
     title: competitive/std/io.hpp
-  - icon: ':heavy_check_mark:'
+  - icon: ':question:'
     path: competitive/std/std.hpp
     title: competitive/std/std.hpp
   _extendedRequiredBy: []
@@ -91,9 +91,9 @@ data:
     \ Doubling Lowest Common Ancestor (\u6700\u5C0F\u5171\u901A\u7956\u5148)\n * @docs\
     \ docs/graph/tree/doubling_lowest_common_ancestor.md\n */\n\ntemplate <typename\
     \ T>\nstruct DoublingLowestCommonAncestor : Graph<T> {\n    vector<vector<int>>\
-    \ parent;\n    vector<int> depth;\n\n    DoublingLowestCommonAncestor() {}\n \
-    \   DoublingLowestCommonAncestor(const Graph<T> &G, int r = 0) { init(G, r); }\n\
-    \n    void init(const Graph<T> &G, int r = 0) {\n        int V = (int)G.size();\n\
+    \ parent;\n    vector<int> depth;\n\n    DoublingLowestCommonAncestor() = default;\n\
+    \    DoublingLowestCommonAncestor(const Graph<T> &G, int r = 0) { init(G, r);\
+    \ }\n\n    void init(const Graph<T> &G, int r = 0) {\n        int V = (int)G.size();\n\
     \        int h = 1;\n        while ((1 << h) < V) h++;\n        parent.assign(h,\
     \ vector<int>(V, -1));\n        depth.assign(V, -1);\n        dfs(G, r, -1, 0);\n\
     \        for (int i = 0; i + 1 < (int)parent.size(); i++)\n            for (int\
@@ -132,7 +132,7 @@ data:
   isVerificationFile: true
   path: online_test/library_checker/yosupo_lca.test.cpp
   requiredBy: []
-  timestamp: '2023-09-22 12:08:10+09:00'
+  timestamp: '2023-10-14 07:08:26+09:00'
   verificationStatus: TEST_ACCEPTED
   verifiedWith: []
 documentation_of: online_test/library_checker/yosupo_lca.test.cpp

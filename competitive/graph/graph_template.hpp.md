@@ -2,19 +2,25 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
+  - icon: ':x:'
+    path: competitive/graph/other/topological_sort.hpp
+    title: competitive/graph/other/topological_sort.hpp
   - icon: ':heavy_check_mark:'
     path: competitive/graph/tree/doubling_lowest_common_ancestor.hpp
     title: "Doubling Lowest Common Ancestor (\u6700\u5C0F\u5171\u901A\u7956\u5148)"
   _extendedVerifiedWith:
+  - icon: ':x:'
+    path: online_test/aoj/aoj_grl_4_b.test.cpp
+    title: online_test/aoj/aoj_grl_4_b.test.cpp
   - icon: ':heavy_check_mark:'
     path: online_test/aoj/aoj_grl_5_c.test.cpp
     title: online_test/aoj/aoj_grl_5_c.test.cpp
   - icon: ':heavy_check_mark:'
     path: online_test/library_checker/yosupo_lca.test.cpp
     title: online_test/library_checker/yosupo_lca.test.cpp
-  _isVerificationFailed: false
+  _isVerificationFailed: true
   _pathExtension: hpp
-  _verificationStatusIcon: ':heavy_check_mark:'
+  _verificationStatusIcon: ':question:'
   attributes:
     _deprecated_at_docs: docs/graph/graph_template.md
     document_title: "Graph Template(\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\
@@ -49,10 +55,12 @@ data:
   isVerificationFile: false
   path: competitive/graph/graph_template.hpp
   requiredBy:
+  - competitive/graph/other/topological_sort.hpp
   - competitive/graph/tree/doubling_lowest_common_ancestor.hpp
   timestamp: '2023-09-22 12:08:10+09:00'
-  verificationStatus: LIBRARY_ALL_AC
+  verificationStatus: LIBRARY_SOME_WA
   verifiedWith:
+  - online_test/aoj/aoj_grl_4_b.test.cpp
   - online_test/aoj/aoj_grl_5_c.test.cpp
   - online_test/library_checker/yosupo_lca.test.cpp
 documentation_of: competitive/graph/graph_template.hpp
