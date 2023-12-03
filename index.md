@@ -39,18 +39,27 @@ data:
     - icon: ':warning:'
       path: competitive/std/debug_print.hpp
       title: competitive/std/debug_print.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: competitive/std/io.hpp
       title: competitive/std/io.hpp
-    - icon: ':heavy_check_mark:'
+    - icon: ':question:'
       path: competitive/std/std.hpp
       title: competitive/std/std.hpp
+  - name: competitive/string
+    pages:
+    - icon: ':x:'
+      path: competitive/string/rolling_hash.hpp
+      title: "Rolling Hash (\u30ED\u30FC\u30EA\u30F3\u30B0\u30CF\u30C3\u30B7\u30E5\
+        )"
   verificationCategories:
   - name: online_test/aoj
     pages:
     - icon: ':heavy_check_mark:'
       path: online_test/aoj/aoj_0233.test.cpp
       title: online_test/aoj/aoj_0233.test.cpp
+    - icon: ':x:'
+      path: online_test/aoj/aoj_alds_1_14_b.test.cpp
+      title: online_test/aoj/aoj_alds_1_14_b.test.cpp
     - icon: ':heavy_check_mark:'
       path: online_test/aoj/aoj_alds_1_1_c.test.cpp
       title: online_test/aoj/aoj_alds_1_1_c.test.cpp
