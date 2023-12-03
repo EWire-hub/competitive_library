@@ -16,28 +16,21 @@ struct RollingHash {
         return l;
     }
 
-    static inline unsigned long long Mul(unsigned long long l,
-                                         unsigned long long r) {
+    static inline unsigned long long MulMod(unsigned long long l,
+                                            unsigned long long r) {
         unsigned long long lu = l >> 31, ld = l & MASK31;
         unsigned long long ru = r >> 31, rd = r & MASK31;
         unsigned long long m = ld * ru + lu * rd;
-        return ((lu * ru) << 1) + ld * rd + ((m & MASK30) << 31) + (m >> 30);
-    }
-
-    static inline unsigned long long CalcMod(unsigned long long val) {
-        val = (val & MOD) + (val >> 61);
-        if (val > MOD) val -= MOD;
-        return val;
-    }
-
-    static inline unsigned long long MulMod(unsigned long long l,
-                                            unsigned long long r) {
-        return CalcMod(Mul(l, r));
+        unsigned long long res =
+            ((lu * ru) << 1) + ld * rd + ((m & MASK30) << 31) + (m >> 30);
+        res = (res & MOD) + (res >> 61);
+        if (res >= MOD) res -= MOD;
+        return res;
     }
 
     static inline unsigned long long generate_base() {
         mt19937_64 mt(chrono::steady_clock::now().time_since_epoch().count());
-        uniform_int_distribution<unsigned long long> rand(1,
+        uniform_int_distribution<unsigned long long> rand(2,
                                                           RollingHash::MOD - 1);
         return rand(mt);
     }
@@ -59,7 +52,7 @@ struct RollingHash {
         int sz = s.size();
         vector<unsigned long long> hashed(sz + 1);
         for (int i = 0; i < sz; i++) {
-            hashed[i + 1] = AddMod(Mul(hashed[i], base), s[i]);
+            hashed[i + 1] = AddMod(MulMod(hashed[i], base), s[i]);
         }
         return hashed;
     }
@@ -69,7 +62,7 @@ struct RollingHash {
         int sz = s.size();
         vector<unsigned long long> hashed(sz + 1);
         for (int i = 0; i < sz; i++) {
-            hashed[i + 1] = AddMod(Mul(hashed[i], base), s[i]);
+            hashed[i + 1] = AddMod(MulMod(hashed[i], base), s[i]);
         }
         return hashed;
     }
@@ -83,7 +76,7 @@ struct RollingHash {
     unsigned long long combine(unsigned long long h1, unsigned long long h2,
                                int h2len) {
         expand(h2len);
-        return AddMod(Mul(h1, power[h2len]), h2);
+        return AddMod(MulMod(h1, power[h2len]), h2);
     }
 
     int lcp(const vector<unsigned long long> &a, int l1, int r1,
