@@ -8,4 +8,4 @@ DAG(閉路のない有向グラフ)をトポロジカルソートする。
 $O(V+E)$
 
 ## Verified with
-- https://judge.u-aizu.ac.jp/onlinejudge/review.jsp?rid=8574769#1[https://judge.u-aizu.ac.jp/onlinejudge/review.jsp?rid=8574769#1]
+- [https://judge.u-aizu.ac.jp/onlinejudge/review.jsp?rid=8574769#1](https://judge.u-aizu.ac.jp/onlinejudge/review.jsp?rid=8574769#1)
