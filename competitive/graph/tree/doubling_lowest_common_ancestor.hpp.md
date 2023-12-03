@@ -1,7 +1,7 @@
 ---
 data:
   _extendedDependsOn:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: competitive/graph/graph_template.hpp
     title: "Graph Template(\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8)"
   _extendedRequiredBy: []
@@ -92,8 +92,8 @@ data:
   timestamp: '2023-10-14 07:08:26+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - online_test/aoj/aoj_grl_5_c.test.cpp
   - online_test/library_checker/yosupo_lca.test.cpp
+  - online_test/aoj/aoj_grl_5_c.test.cpp
 documentation_of: competitive/graph/tree/doubling_lowest_common_ancestor.hpp
 layout: document
 redirect_from:

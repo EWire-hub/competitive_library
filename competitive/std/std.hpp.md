@@ -2,7 +2,7 @@
 data:
   _extendedDependsOn: []
   _extendedRequiredBy:
-  - icon: ':question:'
+  - icon: ':heavy_check_mark:'
     path: competitive/std/io.hpp
     title: competitive/std/io.hpp
   _extendedVerifiedWith:
@@ -18,9 +18,6 @@ data:
   - icon: ':heavy_check_mark:'
     path: online_test/aoj/aoj_dsl_1_b.test.cpp
     title: online_test/aoj/aoj_dsl_1_b.test.cpp
-  - icon: ':x:'
-    path: online_test/aoj/aoj_grl_4_b.test.cpp
-    title: online_test/aoj/aoj_grl_4_b.test.cpp
   - icon: ':heavy_check_mark:'
     path: online_test/aoj/aoj_grl_5_c.test.cpp
     title: online_test/aoj/aoj_grl_5_c.test.cpp
@@ -30,9 +27,9 @@ data:
   - icon: ':heavy_check_mark:'
     path: online_test/library_checker/yosupo_unionfind.test.cpp
     title: online_test/library_checker/yosupo_unionfind.test.cpp
-  _isVerificationFailed: true
+  _isVerificationFailed: false
   _pathExtension: hpp
-  _verificationStatusIcon: ':question:'
+  _verificationStatusIcon: ':heavy_check_mark:'
   attributes:
     links: []
   bundledCode: "#line 2 \"competitive/std/std.hpp\"\n#include <bits/stdc++.h>\nusing\
@@ -85,16 +82,15 @@ data:
   requiredBy:
   - competitive/std/io.hpp
   timestamp: '2023-09-08 12:12:12+09:00'
-  verificationStatus: LIBRARY_SOME_WA
+  verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - online_test/aoj/aoj_0233.test.cpp
-  - online_test/aoj/aoj_grl_4_b.test.cpp
-  - online_test/aoj/aoj_grl_5_c.test.cpp
-  - online_test/aoj/aoj_dsl_1_a.test.cpp
-  - online_test/aoj/aoj_dsl_1_b.test.cpp
-  - online_test/aoj/aoj_alds_1_1_c.test.cpp
   - online_test/library_checker/yosupo_lca.test.cpp
   - online_test/library_checker/yosupo_unionfind.test.cpp
+  - online_test/aoj/aoj_grl_5_c.test.cpp
+  - online_test/aoj/aoj_dsl_1_b.test.cpp
+  - online_test/aoj/aoj_alds_1_1_c.test.cpp
+  - online_test/aoj/aoj_0233.test.cpp
+  - online_test/aoj/aoj_dsl_1_a.test.cpp
 documentation_of: competitive/std/std.hpp
 layout: document
 redirect_from:

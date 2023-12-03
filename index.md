@@ -11,15 +11,15 @@ data:
       title: "\u91CD\u307F\u4ED8\u304D Union Find"
   - name: competitive/graph
     pages:
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: competitive/graph/graph_template.hpp
       title: "Graph Template(\u30B0\u30E9\u30D5\u30C6\u30F3\u30D7\u30EC\u30FC\u30C8\
         )"
   - name: competitive/graph/other
     pages:
-    - icon: ':x:'
+    - icon: ':warning:'
       path: competitive/graph/other/topological_sort.hpp
-      title: competitive/graph/other/topological_sort.hpp
+      title: "\u30C8\u30DD\u30ED\u30B8\u30AB\u30EB\u30BD\u30FC\u30C8"
   - name: competitive/graph/tree
     pages:
     - icon: ':heavy_check_mark:'
@@ -39,10 +39,10 @@ data:
     - icon: ':warning:'
       path: competitive/std/debug_print.hpp
       title: competitive/std/debug_print.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: competitive/std/io.hpp
       title: competitive/std/io.hpp
-    - icon: ':question:'
+    - icon: ':heavy_check_mark:'
       path: competitive/std/std.hpp
       title: competitive/std/std.hpp
   verificationCategories:
@@ -60,9 +60,6 @@ data:
     - icon: ':heavy_check_mark:'
       path: online_test/aoj/aoj_dsl_1_b.test.cpp
       title: online_test/aoj/aoj_dsl_1_b.test.cpp
-    - icon: ':x:'
-      path: online_test/aoj/aoj_grl_4_b.test.cpp
-      title: online_test/aoj/aoj_grl_4_b.test.cpp
     - icon: ':heavy_check_mark:'
       path: online_test/aoj/aoj_grl_5_c.test.cpp
       title: online_test/aoj/aoj_grl_5_c.test.cpp

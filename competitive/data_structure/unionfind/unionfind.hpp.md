@@ -50,8 +50,8 @@ data:
   timestamp: '2023-09-22 12:08:10+09:00'
   verificationStatus: LIBRARY_ALL_AC
   verifiedWith:
-  - online_test/aoj/aoj_dsl_1_a.test.cpp
   - online_test/library_checker/yosupo_unionfind.test.cpp
+  - online_test/aoj/aoj_dsl_1_a.test.cpp
 documentation_of: competitive/data_structure/unionfind/unionfind.hpp
 layout: document
 redirect_from:
