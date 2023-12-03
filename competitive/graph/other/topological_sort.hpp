@@ -1,5 +1,10 @@
 #pragma once
 
+/**
+ * @brief トポロジカルソート
+ * @docs docs/graph/other/topological_sort.md
+ */
+
 #include "../graph_template.hpp"
 
 template <typename T>
